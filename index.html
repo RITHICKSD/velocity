@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity | Elite Auto Diagnostics & Performance</title>
+    <!-- Google Fonts: Rajdhani for technical/racing feel, Inter for readable body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/sports-car-logo.svg">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="theme-dark">
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/sports-car-logo.svg" alt="Velocity Logo" class="logo-icon-img">
+                <div class="logo-text">
+                    <span class="logo-main">VELOCITY</span>
+                    <span class="logo-accent">MOTORSPORTS</span>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Home <i data-lucide="chevron-down" class="dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+                            <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="pricing.html" class="nav-link">Contact</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Dashboard <i data-lucide="chevron-down" class="dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dashboard1.html" class="dropdown-link">User Dashboard</a></li>
+                            <li><a href="dashboard2.html" class="dropdown-link">Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html" class="nav-link nav-login">Login</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn btn-outline btn-icon" aria-label="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button id="dir-toggle" class="btn btn-outline btn-icon" aria-label="Toggle LTR/RTL">
+                    <i data-lucide="globe"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary btn-sm btn-login-header">
+                    <span>Login</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <i data-lucide="align-right"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero slide-up-anim">
+            <div class="hero-bg">
+                <img src="images/hero_bg_1772355133709.png" alt="High Performance Luxury Vehicle in Bay">
+                <div class="hero-overlay"></div>
+                <div class="hero-particles"></div>
+            </div>
+            <div class="container hero-content">
+                <div class="badge reveal reveal-blur">Elite Automotive Care</div>
+                <h1 class="hero-title reveal reveal-up" style="transition-delay: 100ms;">
+                    Precision Care For <br><span class="text-accent">Every Drive</span>
+                </h1>
+                <p class="hero-subtitle reveal reveal-up" style="transition-delay: 200ms;">
+                    Where performance meets perfection. Expert automotive care powered by cutting-edge technology and certified professionals.
+                </p>
+                <div class="hero-buttons reveal reveal-up" style="transition-delay: 300ms;">
+                    <a href="#services" class="btn btn-primary btn-large">
+                        Our Services <i data-lucide="chevron-right"></i>
+                    </a>
+                    <a href="#booking" class="btn btn-outline-light btn-large">
+                        Schedule Appointment
+                    </a>
+                </div>
+
+                <div class="hero-stats reveal reveal-scale" style="transition-delay: 400ms;">
+                    <div class="stat-item">
+                        <span class="stat-number">20<span class="text-accent">+</span></span>
+                        <span class="stat-label">Years Expertise</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10k<span class="text-accent">+</span></span>
+                        <span class="stat-label">Engines Tuned</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100<span class="text-accent">%</span></span>
+                        <span class="stat-label">Precision Guarantee</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands Detailed Ticker Section -->
+        <section class="brands-section bg-darkest">
+            <div class="container">
+                <p class="brands-title text-center">SPECIALIZED IN THE WORLD'S BEST</p>
+                <div class="brands-detailed-grid">
+                    <img src="https://cdn.simpleicons.org/porsche" alt="Porsche"
+                        class="brand-logo-img reveal reveal-scale">
+                    <img src="images/benz.png" alt="Mercedes-Benz"
+                        class="brand-logo-img reveal reveal-scale" style="transition-delay: 100ms;">
+                    <img src="https://cdn.simpleicons.org/ferrari" alt="Ferrari"
+                        class="brand-logo-img reveal reveal-scale" style="transition-delay: 200ms;">
+                    <img src="https://cdn.simpleicons.org/bmw" alt="BMW" class="brand-logo-img reveal reveal-scale"
+                        style="transition-delay: 300ms;">
+                    <img src="https://cdn.simpleicons.org/lamborghini" alt="Lamborghini"
+                        class="brand-logo-img reveal reveal-scale" style="transition-delay: 400ms;">
+                    <img src="https://cdn.simpleicons.org/audi" alt="Audi" class="brand-logo-img reveal reveal-scale"
+                        style="transition-delay: 500ms;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="section stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stats-item reveal reveal-scale">
+                        <div class="stats-number" data-target="20" data-suffix="+">0<span class="text-accent">+</span></div>
+                        <div class="stats-label">Years of Excellence</div>
+                    </div>
+                    <div class="stats-item reveal reveal-scale" style="transition-delay: 100ms;">
+                        <div class="stats-number" data-target="15" data-suffix="K+">0<span class="text-accent">K+</span></div>
+                        <div class="stats-label">Vehicles Serviced</div>
+                    </div>
+                    <div class="stats-item reveal reveal-scale" style="transition-delay: 200ms;">
+                        <div class="stats-number" data-target="50" data-suffix="+">0<span class="text-accent">+</span></div>
+                        <div class="stats-label">Expert Technicians</div>
+                    </div>
+                    <div class="stats-item reveal reveal-scale" style="transition-delay: 300ms;">
+                        <div class="stats-number" data-target="99" data-suffix="%">0<span class="text-accent">%</span></div>
+                        <div class="stats-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Builds Showcase -->
+        <section id="featured-builds" class="section featured-builds-section">
+            <div class="container">
+                <div class="section-header text-center reveal reveal-blur">
+                    <h4 class="section-kicker">Recent Work</h4>
+                    <h2 class="section-title">Featured <span>Builds</span></h2>
+                    <p class="section-subtitle">A closer look at some of our latest high-performance transformations.</p>
+                </div>
+                <div class="builds-grid">
+                    <div class="build-card reveal reveal-left">
+                        <div class="build-img">
+                            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=600&h=400" alt="Porsche 911 GT3 RS Build">
+                            <div class="build-badge">Completed</div>
+                        </div>
+                        <div class="build-info">
+                            <div class="build-meta">
+                                <span class="build-tag">Porsche</span>
+                                <span class="build-duration"><i data-lucide="clock"></i> 6 Weeks</span>
+                            </div>
+                            <h3>911 GT3 RS Track Package</h3>
+                            <p>Full roll cage installation, KW Clubsport coilovers, Akrapovic titanium exhaust, and Stage 2 ECU remap delivering 547hp.</p>
+                            <div class="build-stats-row">
+                                <div class="build-stat">
+                                    <strong>547</strong>
+                                    <span>HP Output</span>
+                                </div>
+                                <div class="build-stat">
+                                    <strong>3.1s</strong>
+                                    <span>0-60 mph</span>
+                                </div>
+                                <div class="build-stat">
+                                    <strong>12</strong>
+                                    <span>Mods Installed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="build-card reveal reveal-right" style="transition-delay: 150ms;">
+                        <div class="build-img">
+                            <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=600&h=400" alt="Audi RS6 Stage 3">
+                            <div class="build-badge">Completed</div>
+                        </div>
+                        <div class="build-info">
+                            <div class="build-meta">
+                                <span class="build-tag">Audi</span>
+                                <span class="build-duration"><i data-lucide="clock"></i> 8 Weeks</span>
+                            </div>
+                            <h3>RS6 Avant Stage 3 Monster</h3>
+                            <p>Hybrid turbo upgrade, forged internals, custom intercooler, full Milltek exhaust system, and bespoke ECU calibration.</p>
+                            <div class="build-stats-row">
+                                <div class="build-stat">
+                                    <strong>780</strong>
+                                    <span>HP Output</span>
+                                </div>
+                                <div class="build-stat">
+                                    <strong>2.9s</strong>
+                                    <span>0-60 mph</span>
+                                </div>
+                                <div class="build-stat">
+                                    <strong>18</strong>
+                                    <span>Mods Installed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="build-card reveal reveal-left" style="transition-delay: 300ms;">
+                        <div class="build-img">
+                            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=600&h=400" alt="Ferrari F8 Tributo">
+                            <div class="build-badge in-progress">In Progress</div>
+                        </div>
+                        <div class="build-info">
+                            <div class="build-meta">
+                                <span class="build-tag">Ferrari</span>
+                                <span class="build-duration"><i data-lucide="clock"></i> 10 Weeks</span>
+                            </div>
+                            <h3>F8 Tributo Track Evolution</h3>
+                            <p>Capristo exhaust system, carbon fiber aero package, Novitec springs, sport catalysts, and custom wheel fitment.</p>
+                            <div class="build-stats-row">
+                                <div class="build-stat">
+                                    <strong>750</strong>
+                                    <span>HP Target</span>
+                                </div>
+                                <div class="build-stat">
+                                    <strong>2.7s</strong>
+                                    <span>0-60 Target</span>
+                                </div>
+                                <div class="build-stat">
+                                    <strong>65%</strong>
+                                    <span>Progress</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-us" class="section bg-darker">
+            <div class="container">
+                <div class="section-header text-center reveal reveal-blur">
+                    <h4 class="section-kicker">Core Values</h4>
+                    <h2 class="section-title">Why Trust <span>Velocity</span>?</h2>
+                </div>
+                <div class="why-grid">
+                    <div class="why-item reveal reveal-scale">
+                        <div class="why-img">
+                            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=400&h=250" alt="Certified Expertise">
+                        </div>
+                        <div class="why-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>Certified Expertise</h3>
+                        <p>Our technicians hold advanced factory certifications for leading sports car brands.</p>
+                    </div>
+                    <div class="why-item reveal reveal-scale" style="transition-delay: 100ms;">
+                        <div class="why-img">
+                            <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=400&h=250" alt="Clinical Precision">
+                        </div>
+                        <div class="why-icon"><i data-lucide="microscope"></i></div>
+                        <h3>Clinical Precision</h3>
+                        <p>Every tool and diagnostic procedure matches the highest laboratory-grade standards.</p>
+                    </div>
+                    <div class="why-item reveal reveal-scale" style="transition-delay: 200ms;">
+                        <div class="why-img">
+                            <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&q=80&w=400&h=250" alt="Authentic Parts">
+                        </div>
+                        <div class="why-icon"><i data-lucide="award"></i></div>
+                        <h3>Authentic Parts</h3>
+                        <p>We use zero aftermarket compromises. Everything is OEM or race-spec performance hardware.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specializations Section -->
+        <section id="specializations" class="section specializations-section bg-darkest">
+            <div class="container">
+                <div class="section-header text-center reveal reveal-blur">
+                    <h4 class="section-kicker">What We Drive</h4>
+                    <h2 class="section-title">Our <span>Specializations</span></h2>
+                    <p class="section-subtitle">From track-bred supercars to luxury daily drivers, we master every marque.</p>
+                </div>
+                <div class="spec-grid">
+                    <div class="spec-card reveal reveal-scale">
+                        <div class="spec-img">
+                            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=600&h=400" alt="German Cars">
+                            <div class="spec-overlay"></div>
+                        </div>
+                        <div class="spec-info">
+                            <h3>German Engineering</h3>
+                            <p>Porsche &bull; BMW &bull; Mercedes-AMG &bull; Audi RS</p>
+                        </div>
+                    </div>
+                    <div class="spec-card reveal reveal-scale" style="transition-delay: 100ms;">
+                        <div class="spec-img">
+                            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=600&h=400" alt="Italian Exotics">
+                            <div class="spec-overlay"></div>
+                        </div>
+                        <div class="spec-info">
+                            <h3>Italian Exotics</h3>
+                            <p>Ferrari &bull; Lamborghini &bull; Maserati &bull; Alfa Romeo</p>
+                        </div>
+                    </div>
+                    <div class="spec-card reveal reveal-scale" style="transition-delay: 200ms;">
+                        <div class="spec-img">
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=600&h=400" alt="British Performance">
+                            <div class="spec-overlay"></div>
+                        </div>
+                        <div class="spec-info">
+                            <h3>British Performance</h3>
+                            <p>McLaren &bull; Aston Martin &bull; Bentley &bull; Jaguar</p>
+                        </div>
+                    </div>
+                    <div class="spec-card reveal reveal-scale" style="transition-delay: 300ms;">
+                        <div class="spec-img">
+                            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&q=80&w=600&h=400" alt="Hypercars">
+                            <div class="spec-overlay"></div>
+                        </div>
+                        <div class="spec-info">
+                            <h3>Hypercars &amp; Rare</h3>
+                            <p>Bugatti &bull; Koenigsegg &bull; Pagani &bull; Rimac</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process -->
+        <section id="process" class="section process-section">
+            <div class="container relative">
+                <div class="section-header text-center reveal reveal-up">
+                    <h4 class="section-kicker">Workflow</h4>
+                    <h2 class="section-title">The Velocity <span>Process</span></h2>
+                    <p class="section-subtitle">Transparency and precision at every step.</p>
+                </div>
+
+                <div class="process-steps">
+                    <div class="process-line"></div>
+                    <!-- Step 1 -->
+                    <div class="step reveal reveal-flip">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Consultation</h3>
+                            <p>We discuss your concerns, driving habits, and vehicle history to establish a baseline.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="step reveal reveal-flip" style="transition-delay: 150ms;">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Diagnostics</h3>
+                            <p>Utilizing proprietary factory tools and physical inspection to pinpoint exact issues.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="step reveal reveal-flip" style="transition-delay: 300ms;">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Execution</h3>
+                            <p>Master technicians handle the repair utilizing OEM parts in our pristine service bays.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="step reveal reveal-flip" style="transition-delay: 450ms;">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Verification</h3>
+                            <p>Rigorous test drives and final QA checks ensure the vehicle meets our exacting standards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Team Section -->
+        <section id="team" class="section team-section bg-darker">
+            <div class="container">
+                <div class="section-header text-center reveal reveal-blur">
+                    <h4 class="section-kicker">The Masters</h4>
+                    <h2 class="section-title">Meet Your <span>Technicians</span></h2>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member reveal reveal-left">
+                        <div class="member-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Vance">
+                        </div>
+                        <div class="member-info">
+                            <h3>Marcus Vance</h3>
+                            <p class="role">Chief Diagnostic Engineer</p>
+                            <p class="desc">Former factory Porsche engineer with a specialization in complex electrical
+                                systems.</p>
+                        </div>
+                    </div>
+                    <div class="team-member reveal reveal-scale" style="transition-delay: 150ms;">
+                        <div class="member-img">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Elena Rostova">
+                        </div>
+                        <div class="member-info">
+                            <h3>Elena Rostova</h3>
+                            <p class="role">Lead Tuning Specialist</p>
+                            <p class="desc">Expert in forced induction and custom ECU calibrations for track and street
+                                use.</p>
+                        </div>
+                    </div>
+                    <div class="team-member reveal reveal-right" style="transition-delay: 300ms;">
+                        <div class="member-img">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Chen">
+                        </div>
+                        <div class="member-info">
+                            <h3>David Chen</h3>
+                            <p class="role">Master Mechanic</p>
+                            <p class="desc">30 years experience rebuilding high-performance engines and transmissions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section gallery-section">
+            <div class="container container-full">
+                <div class="section-header text-center reveal reveal-blur">
+                    <h4 class="section-kicker">Showcase</h4>
+                    <h2 class="section-title">Recent <span>Builds</span></h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal reveal-scale">
+                        <div class="gallery-overlay">
+                            <h4>Track Prep 911</h4>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&q=80&w=600&h=400"
+                            alt="Track Car">
+                    </div>
+                    <div class="gallery-item reveal reveal-scale" style="transition-delay: 100ms;">
+                        <div class="gallery-overlay">
+                            <h4>AMG Engine Rebuild</h4>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=600&h=400"
+                            alt="Engine Room">
+                    </div>
+                    <div class="gallery-item reveal reveal-scale" style="transition-delay: 200ms;">
+                        <div class="gallery-overlay">
+                            <h4>Custom RS Tuning</h4>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=600&h=400"
+                            alt="Audi Tuning">
+                    </div>
+                    <div class="gallery-item reveal reveal-scale" style="transition-delay: 300ms;">
+                        <div class="gallery-overlay">
+                            <h4>McLaren Diagnostics</h4>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=600&h=400"
+                            alt="McLaren Bay">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section certifications-section bg-darker">
+            <div class="container">
+                <div class="section-header text-center reveal reveal-blur">
+                    <h4 class="section-kicker">Credentials</h4>
+                    <h2 class="section-title">Certified &amp; <span>Trusted</span></h2>
+                </div>
+                <div class="cert-grid">
+                    <div class="cert-item reveal reveal-scale">
+                        <div class="cert-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>ASE Master Certified</h3>
+                        <p>National Institute for Automotive Service Excellence</p>
+                    </div>
+                    <div class="cert-item reveal reveal-scale" style="transition-delay: 100ms;">
+                        <div class="cert-icon"><i data-lucide="shield"></i></div>
+                        <h3>Porsche Certified</h3>
+                        <p>Factory-trained specialists for all Porsche models</p>
+                    </div>
+                    <div class="cert-item reveal reveal-scale" style="transition-delay: 200ms;">
+                        <div class="cert-icon"><i data-lucide="award"></i></div>
+                        <h3>BMW Specialist</h3>
+                        <p>Authorized independent BMW service center</p>
+                    </div>
+                    <div class="cert-item reveal reveal-scale" style="transition-delay: 300ms;">
+                        <div class="cert-icon"><i data-lucide="file-check"></i></div>
+                        <h3>ISO 9001:2015</h3>
+                        <p>Quality management system certified facility</p>
+                    </div>
+                    <div class="cert-item reveal reveal-scale" style="transition-delay: 400ms;">
+                        <div class="cert-icon"><i data-lucide="zap"></i></div>
+                        <h3>EV Certified</h3>
+                        <p>High-voltage systems trained &amp; certified technicians</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Book Consultation CTA -->
+        <section id="consultation-cta" class="section cta-banner-section">
+            <div class="cta-banner-bg">
+                <div class="cta-overlay"></div>
+                <div class="container">
+                    <div class="cta-banner-content reveal reveal-up">
+                        <h4 class="section-kicker">Ready to Begin?</h4>
+                        <h2 class="section-title">Transform Your Vehicle Into a <span>Precision Machine</span></h2>
+                        <p class="cta-banner-desc">Whether it's a full engine build, track preparation, or scheduled maintenance — our master technicians are ready to deliver results that exceed expectations.</p>
+                        <div class="cta-banner-actions">
+                            <a href="#booking" class="btn btn-primary btn-lg"><i data-lucide="calendar"></i> Book Consultation</a>
+                            <a href="tel:+1234567890" class="btn btn-outline-light btn-lg"><i data-lucide="phone"></i> Call Us Now</a>
+                        </div>
+                        <div class="cta-trust-badges">
+                            <div class="trust-badge"><i data-lucide="shield-check"></i> <span>ASE Certified</span></div>
+                            <div class="trust-badge"><i data-lucide="clock"></i> <span>Same-Day Quotes</span></div>
+                            <div class="trust-badge"><i data-lucide="award"></i> <span>5-Star Rated</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TestimonialsSection -->
+        <section id="testimonials" class="section testimonial-section">
+            <div class="container">
+                <div class="section-header text-center reveal reveal-up">
+                    <h4 class="section-kicker">Client Feedback</h4>
+                    <h2 class="section-title">Word on the <span>Street</span></h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal reveal-left">
+                        <div class="stars">
+                            <i data-lucide="star" class="star filled"></i>
+                            <i data-lucide="star" class="star filled"></i>
+                            <i data-lucide="star" class="star filled"></i>
+                            <i data-lucide="star" class="star filled"></i>
+                            <i data-lucide="star" class="star filled"></i>
+                        </div>
+                        <p class="review-text">"Velocity found an electrical gremlin in my AMG that the dealership spent
+                            weeks trying to locate. They fixed it in two days and gave me a full report. Absolute
+                            professionals."</p>
+                        <div class="client-info">
+                            <div class="client-avatar bg-gray"><i data-lucide="car"></i></div>
+                            <div>
+                                <h4>Richard T.</h4>
+                                <span>AMG GT Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal reveal-right" style="transition-delay: 150ms;">
+                        <div class="stars">
+                            <i data-lucide="star" class="star filled"></i>
+                            <i data-lucide="star" class="star filled"></i>
+                            <i data-lucide="star" class="star filled"></i>
+                            <i data-lucide="star" class="star filled"></i>
+                            <i data-lucide="star" class="star filled"></i>
+                        </div>
+                        <p class="review-text">"The only shop I trust with my 911. From routine oil changes using proper
+                            Motul fluids to the recent suspension upgrade, their attention to detail is unmatched."</p>
+                        <div class="client-info">
+                            <div class="client-avatar bg-gray"><i data-lucide="car"></i></div>
+                            <div>
+                                <h4>Sarah M.</h4>
+                                <span>Porsche 911 GT3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-header text-center reveal reveal-blur">
+                    <h4 class="section-kicker">Questions</h4>
+                    <h2 class="section-title">Frequently <span>Asked</span></h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-card reveal reveal-up">
+                        <div class="faq-card-icon"><i data-lucide="wrench"></i></div>
+                        <h3 class="faq-card-question">What brands do you specialize in?</h3>
+                        <p class="faq-card-answer">We specialize in European luxury and exotic vehicles including Porsche, BMW, Mercedes-AMG, Ferrari, Lamborghini, McLaren, Aston Martin, Audi, and more. Our technicians hold factory certifications for all major brands.</p>
+                    </div>
+                    <div class="faq-card reveal reveal-up" style="transition-delay: 100ms;">
+                        <div class="faq-card-icon"><i data-lucide="shield-check"></i></div>
+                        <h3 class="faq-card-question">Do you offer warranty on repairs?</h3>
+                        <p class="faq-card-answer">Yes, all our services come with a minimum 24-month / 24,000-mile warranty on parts and labor. Performance tuning packages include a 12-month powertrain warranty.</p>
+                    </div>
+                    <div class="faq-card reveal reveal-up" style="transition-delay: 200ms;">
+                        <div class="faq-card-icon"><i data-lucide="clock"></i></div>
+                        <h3 class="faq-card-question">How long does a typical diagnostic take?</h3>
+                        <p class="faq-card-answer">A comprehensive diagnostic scan typically takes 1-2 hours. Complex electrical issues may require additional time. We provide detailed reports with photos and videos of any findings.</p>
+                    </div>
+                    <div class="faq-card reveal reveal-up" style="transition-delay: 300ms;">
+                        <div class="faq-card-icon"><i data-lucide="cog"></i></div>
+                        <h3 class="faq-card-question">Do you use OEM or aftermarket parts?</h3>
+                        <p class="faq-card-answer">We exclusively use OEM (Original Equipment Manufacturer) parts or better. For performance upgrades, we partner with top-tier manufacturers like Akrapovic, Bilstein, and Brembo.</p>
+                    </div>
+                    <div class="faq-card reveal reveal-up" style="transition-delay: 400ms;">
+                        <div class="faq-card-icon"><i data-lucide="zap"></i></div>
+                        <h3 class="faq-card-question">Can you work on electric or hybrid vehicles?</h3>
+                        <p class="faq-card-answer">Absolutely. Our facility is equipped with high-voltage safety equipment and our technicians are certified for EV and hybrid systems including Porsche Taycan, BMW iX, and Tesla models.</p>
+                    </div>
+                    <div class="faq-card reveal reveal-up" style="transition-delay: 500ms;">
+                        <div class="faq-card-icon"><i data-lucide="truck"></i></div>
+                        <h3 class="faq-card-question">Do you offer pickup and delivery service?</h3>
+                        <p class="faq-card-answer">Yes, we offer complimentary enclosed vehicle transport within a 50-mile radius for all Performance and Bespoke package clients. Contact us for details on our white-glove pickup service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-wrapper reveal reveal-scale">
+                    <div class="newsletter-content">
+                        <h2>Stay in the <span>Fast Lane</span></h2>
+                        <p>Get exclusive maintenance tips, special offers, and first access to performance packages.</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe <i data-lucide="arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="booking" class="section cta-section">
+            <div class="container">
+                <div class="cta-wrapper reveal reveal-scale">
+                    <div class="cta-content">
+                        <h2>Ready to Elevate Your Drive?</h2>
+                        <p>Our bays are busy, but excellence is worth the wait. Book your consultation today.</p>
+                        <ul class="contact-list">
+                            <li><i data-lucide="phone"></i> +1 (800) VELOCITY</li>
+                            <li><i data-lucide="mail"></i> service@velocitymotors.com</li>
+                            <li><i data-lucide="map-pin"></i> 100 Apex Corner, Motor City, MC 90210</li>
+                        </ul>
+                    </div>
+                    <div class="cta-form-container">
+                        <form class="booking-form">
+                            <h3>Request an Appointment</h3>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vehicle">Vehicle Make & Model</label>
+                                <input type="text" id="vehicle" placeholder="e.g. 2020 BMW M3" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Needed</label>
+                                <select id="service">
+                                    <option>Diagnostics</option>
+                                    <option>Scheduled Maintenance</option>
+                                    <option>Performance Tuning</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Submit Request <i
+                                    data-lucide="send"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-darkest">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">
+                    <img src="images/sports-car-logo.svg" alt="Velocity Logo" class="logo-icon-img">
+                    <div class="logo-text">
+                        <span class="logo-main">VELOCITY</span>
+                        <span class="logo-accent">MOTORSPORTS</span>
+                    </div>
+                </a>
+                <p class="footer-desc">The ultimate destination for European luxury and exotic automotive maintenance,
+                    diagnostics, and performance optimization.</p>
+                <div class="social-links mt-4">
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Diagnostic Procedures</a></li>
+                    <li><a href="#">Scheduled Maintenance</a></li>
+                    <li><a href="#">Engine Rebuilds</a></li>
+                    <li><a href="#">Performance Tuning</a></li>
+                    <li><a href="#">EV & Hybrid Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#process">The Process</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Hours of Operation</h3>
+                <ul class="hours-list">
+                    <li><span>Monday - Friday</span> <span>8:00 AM - 6:00 PM</span></li>
+                    <li><span>Saturday</span> <span>9:00 AM - 2:00 PM</span></li>
+                    <li><span>Sunday</span> <span class="text-accent">Closed</span></li>
+                </ul>
+                <div class="emergency-contact mt-4">
+                    <strong>24/7 Towing Hoteline:</strong>
+                    <a href="tel:5551234567" class="text-white">555-123-4567</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Velocity Motorsports. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

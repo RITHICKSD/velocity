@@ -1,0 +1,1502 @@
+/* ============================================================
+   HOME 2 — Unique Design System
+   Completely different from Home 1
+   Font: Castellar (display) vs Home 1's Copperplate Gothic
+   Style: Editorial / Minimal Luxury with heavy animations
+   ============================================================ */
+
+/* --- Override body for Home 2 --- */
+.home2-body {
+    background: #050505;
+}
+
+/* ========================
+   TYPOGRAPHY
+   ======================== */
+.h2-kicker {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--clr-primary);
+    display: inline-block;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 40px;
+}
+.h2-kicker::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 28px;
+    height: 2px;
+    background: var(--clr-primary);
+}
+
+.h2-title {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    line-height: 1.15;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.2rem;
+}
+.h2-title span {
+    color: var(--clr-primary);
+}
+
+.h2-subtitle {
+    color: var(--clr-gray);
+    font-size: 1.05rem;
+    max-width: 540px;
+    margin-inline: auto;
+    line-height: 1.7;
+}
+
+.h2-section {
+    padding: 7rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.h2-section-head {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* ========================
+   BUTTONS (Unique to H2)
+   ======================== */
+.h2-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 2rem;
+    background: var(--clr-primary);
+    color: #fff;
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+.h2-btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.15);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+.h2-btn-primary:hover::before {
+    transform: translateX(0);
+}
+.h2-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(217, 4, 41, 0.4);
+}
+
+.h2-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 2rem;
+    background: transparent;
+    color: var(--clr-white);
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
+}
+.h2-btn-ghost:hover {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(217, 4, 41, 0.15);
+}
+
+.w-full { width: 100%; justify-content: center; }
+
+/* ========================
+   HERO — Split Screen
+   ======================== */
+.h2-hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+}
+
+.h2-hero-left {
+    display: flex;
+    align-items: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.h2-hero-text-wrap {
+    max-width: 600px;
+}
+
+.h2-hero-kicker {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--clr-primary);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateX(-40px);
+}
+.h2-hero-kicker.animated {
+    animation: h2SlideRight 0.8s ease forwards;
+}
+
+.h2-hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.anim-char-reveal {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    letter-spacing: -2px;
+    opacity: 0;
+    transform: translateY(60px) rotateX(15deg);
+    display: block;
+}
+.anim-char-reveal.accent {
+    color: var(--clr-primary);
+    -webkit-text-stroke: 0;
+}
+.anim-char-reveal.animated {
+    animation: h2CharReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: calc(var(--delay) * 0.15s);
+}
+
+.h2-hero-desc {
+    font-size: 1.1rem;
+    color: var(--clr-gray);
+    line-height: 1.8;
+    margin: 1.5rem 0 2rem;
+    max-width: 480px;
+    opacity: 0;
+    transform: translateY(30px);
+}
+.h2-hero-desc.animated {
+    animation: h2FadeUp 0.8s ease forwards;
+    animation-delay: calc(var(--delay) * 0.15s);
+}
+
+.h2-hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(30px);
+}
+.h2-hero-btns.animated {
+    animation: h2FadeUp 0.8s ease forwards;
+    animation-delay: calc(var(--delay) * 0.15s);
+}
+
+.h2-hero-right {
+    position: relative;
+    overflow: hidden;
+}
+.h2-hero-img-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.h2-hero-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.08);
+    transition: transform 8s ease;
+}
+.h2-hero-img-wrap:hover img {
+    transform: scale(1);
+}
+.h2-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #050505 0%, transparent 40%),
+                linear-gradient(to top, #050505 0%, transparent 30%);
+}
+
+/* Brand Ticker */
+.h2-hero-ticker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 0;
+    overflow: hidden;
+}
+.ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    animation: tickerScroll 30s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+}
+.ticker-track span {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+}
+
+/* Floating Stats */
+.h2-hero-floats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+.float-stat {
+    background: rgba(15,15,15,0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 1.2rem 1.8rem;
+    opacity: 0;
+    transform: translateY(40px);
+}
+.float-stat.animated {
+    animation: h2FadeUp 0.8s ease forwards;
+    animation-delay: calc(var(--delay) * 0.2s);
+}
+.float-num {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--clr-primary);
+}
+.float-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--clr-gray);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0.2rem;
+}
+
+/* ========================
+   ABOUT — Editorial Layout
+   ======================== */
+.h2-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.h2-about-images {
+    position: relative;
+    padding: 2rem;
+}
+.h2-about-img-main {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+.h2-about-img-main img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+.h2-about-img-main:hover img {
+    transform: scale(1.05);
+}
+
+.h2-about-img-float {
+    position: absolute;
+    bottom: -1rem;
+    right: -1rem;
+    width: 55%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 4px solid #050505;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    z-index: 2;
+}
+.h2-about-img-float img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+.h2-about-img-float:hover img {
+    transform: scale(1.08);
+}
+
+.h2-about-exp-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--clr-primary);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 3;
+    box-shadow: 0 15px 40px rgba(217, 4, 41, 0.4);
+}
+.h2-about-exp-badge .big-num {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    display: block;
+    line-height: 1;
+}
+.h2-about-exp-badge span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.h2-about-content p {
+    color: var(--clr-gray);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.h2-about-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.h2-mini-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+.h2-mini-stat:hover {
+    border-color: var(--clr-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(217, 4, 41, 0.1);
+}
+.h2-mini-stat i {
+    color: var(--clr-primary);
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+.h2-mini-stat strong {
+    display: block;
+    color: var(--clr-white);
+    font-size: 0.85rem;
+}
+.h2-mini-stat span {
+    font-size: 0.75rem;
+    color: var(--clr-gray);
+}
+
+/* ========================
+   SERVICES — Horizontal Scroll
+   ======================== */
+.h2-services {
+    background: linear-gradient(180deg, #050505 0%, #0a0a0a 50%, #050505 100%);
+}
+.h2-services-track {
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+.h2-services-track::-webkit-scrollbar {
+    display: none;
+}
+
+.h2-srv-card {
+    flex: 0 0 380px;
+    scroll-snap-align: start;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+}
+.h2-srv-card:hover {
+    border-color: rgba(217, 4, 41, 0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 40px rgba(217, 4, 41, 0.08);
+}
+
+.h2-srv-img {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+.h2-srv-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+.h2-srv-card:hover .h2-srv-img img {
+    transform: scale(1.1);
+}
+.h2-srv-num {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: rgba(255,255,255,0.1);
+    letter-spacing: -2px;
+    line-height: 1;
+    transition: color 0.4s ease;
+}
+.h2-srv-card:hover .h2-srv-num {
+    color: rgba(217, 4, 41, 0.3);
+}
+
+.h2-srv-body {
+    padding: 1.5rem 1.8rem 2rem;
+}
+.h2-srv-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(217, 4, 41, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.4s ease;
+}
+.h2-srv-icon i {
+    color: var(--clr-primary);
+    width: 22px;
+    height: 22px;
+}
+.h2-srv-card:hover .h2-srv-icon {
+    background: var(--clr-primary);
+}
+.h2-srv-card:hover .h2-srv-icon i {
+    color: #fff;
+}
+.h2-srv-body h3 {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--clr-white);
+    margin-bottom: 0.6rem;
+}
+.h2-srv-body p {
+    color: var(--clr-gray);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+.h2-srv-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.h2-srv-link i {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+.h2-srv-link:hover {
+    color: var(--clr-white);
+}
+.h2-srv-link:hover i {
+    transform: translate(4px, -4px);
+}
+
+/* ========================
+   GALLERY — Masonry Grid
+   ======================== */
+.h2-gallery {
+    background: #0a0a0a;
+}
+.h2-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.h2-gal-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 350px;
+}
+.h2-gal-item.h2-gal-wide {
+    grid-column: span 2;
+}
+.h2-gal-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.h2-gal-item:hover img {
+    transform: scale(1.15);
+}
+
+.h2-gal-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.3) 40%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+.h2-gal-item:hover .h2-gal-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+.h2-gal-tag {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--clr-primary);
+    margin-bottom: 0.5rem;
+}
+.h2-gal-overlay h4 {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    margin-bottom: 0.3rem;
+}
+.h2-gal-overlay p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ========================
+   PRICING — Glassmorphism
+   ======================== */
+.h2-pricing {
+    background: linear-gradient(180deg, #0a0a0a 0%, #080808 100%);
+}
+.h2-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.h2-price-card {
+    position: relative;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+}
+.h2-price-card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(217, 4, 41, 0.25);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+.h2-price-card.featured {
+    border-color: rgba(217, 4, 41, 0.4);
+    background: linear-gradient(160deg, rgba(217, 4, 41, 0.08) 0%, rgba(255,255,255,0.03) 100%);
+    transform: scale(1.05);
+}
+.h2-price-card.featured:hover {
+    transform: scale(1.05) translateY(-12px);
+}
+
+.h2-price-glow {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(217, 4, 41, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.h2-price-card:hover .h2-price-glow {
+    opacity: 1;
+}
+
+.h2-price-badge {
+    position: absolute;
+    top: 1.2rem;
+    right: -2rem;
+    background: var(--clr-primary);
+    color: #fff;
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.4rem 3rem;
+    transform: rotate(42deg);
+}
+
+.h2-price-head {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.h2-price-tier {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--clr-primary);
+}
+.h2-price-amount {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: var(--clr-white);
+    margin: 0.5rem 0;
+    line-height: 1;
+}
+.h2-price-amount sup {
+    font-size: 1.2rem;
+    vertical-align: super;
+    color: var(--clr-gray);
+}
+.h2-price-head p {
+    color: var(--clr-gray);
+    font-size: 0.9rem;
+}
+
+.h2-price-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+.h2-price-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--clr-light);
+    font-size: 0.9rem;
+}
+.h2-price-features li i {
+    width: 18px;
+    height: 18px;
+    color: var(--clr-primary);
+    flex-shrink: 0;
+}
+
+/* ========================
+   REVIEWS — Marquee
+   ======================== */
+.h2-reviews {
+    background: #050505;
+    overflow: hidden;
+}
+.h2-reviews-marquee {
+    overflow: hidden;
+    padding: 1rem 0 2rem;
+}
+.h2-reviews-track {
+    display: flex;
+    gap: 2rem;
+    animation: marqueeScroll 40s linear infinite;
+    width: max-content;
+}
+.h2-reviews-track:hover {
+    animation-play-state: paused;
+}
+
+.h2-review-card {
+    flex: 0 0 400px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.4s ease;
+}
+.h2-review-card:hover {
+    border-color: rgba(217, 4, 41, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+.h2-review-stars {
+    display: flex;
+    gap: 0.2rem;
+    margin-bottom: 1rem;
+}
+.h2-review-stars i {
+    width: 16px;
+    height: 16px;
+    color: #FFB800;
+    fill: #FFB800;
+}
+.h2-review-card p {
+    color: var(--clr-gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+}
+.h2-review-author {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.h2-review-author img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(217, 4, 41, 0.3);
+}
+.h2-review-author strong {
+    display: block;
+    color: var(--clr-white);
+    font-size: 0.9rem;
+}
+.h2-review-author span {
+    font-size: 0.75rem;
+    color: var(--clr-gray);
+}
+
+/* ========================
+   FAQ — Side by Side
+   ======================== */
+.h2-faq {
+    background: #0a0a0a;
+}
+.h2-faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: start;
+}
+.h2-faq-left p {
+    color: var(--clr-gray);
+    line-height: 1.8;
+    max-width: 360px;
+}
+
+.h2-faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 4px;
+    margin-bottom: 0.25rem;
+    transition: background 0.3s ease;
+}
+.h2-faq-item:hover {
+    background: rgba(255, 255, 255, 0.025);
+}
+.h2-faq-item.active {
+    background: rgba(217, 4, 41, 0.03);
+    border-bottom-color: rgba(217, 4, 41, 0.15);
+}
+.h2-faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.3rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 1rem;
+}
+.h2-faq-q span {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--clr-light);
+    text-align: left;
+    transition: color 0.3s ease;
+}
+.h2-faq-item.active .h2-faq-q span {
+    color: var(--clr-primary);
+}
+.h2-faq-q:hover span {
+    color: var(--clr-primary);
+}
+
+.h2-faq-plus {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    flex-shrink: 0;
+}
+.h2-faq-plus span {
+    position: absolute;
+    background: var(--clr-primary);
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.h2-faq-plus span:first-child {
+    width: 16px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.h2-faq-plus span:last-child {
+    width: 2px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.h2-faq-item.active .h2-faq-plus span:last-child {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+}
+
+.h2-faq-a {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease;
+}
+.h2-faq-a-inner {
+    overflow: hidden;
+}
+.h2-faq-item.active .h2-faq-a {
+    grid-template-rows: 1fr;
+}
+.h2-faq-a p {
+    color: var(--clr-gray);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    padding: 0 0.5rem 1.25rem;
+    margin: 0;
+}
+
+/* ========================
+   BOOKING / CTA
+   ======================== */
+.h2-booking {
+    background: #050505;
+}
+.h2-booking-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 4rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 24px;
+    padding: 3.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.h2-booking-wrap::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(217, 4, 41, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.h2-booking-left p {
+    color: var(--clr-gray);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+.h2-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.h2-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--clr-light);
+    font-size: 0.95rem;
+}
+.h2-contact-list li i {
+    width: 20px;
+    height: 20px;
+    color: var(--clr-primary);
+}
+.h2-contact-socials {
+    display: flex;
+    gap: 1rem;
+}
+.h2-contact-socials a {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-gray);
+    transition: all 0.4s ease;
+}
+.h2-contact-socials a:hover {
+    color: var(--clr-primary);
+    border-color: var(--clr-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(217, 4, 41, 0.15);
+}
+.h2-contact-socials a i {
+    width: 20px;
+    height: 20px;
+}
+
+.h2-form {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 2.5rem;
+}
+.h2-form h3 {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--clr-white);
+    margin-bottom: 1.5rem;
+}
+.h2-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.h2-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+.h2-form-group label {
+    font-family: 'Copperplate Gothic Light', 'Copperplate', 'Copperplate Gothic', 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--clr-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.h2-form-group input,
+.h2-form-group select,
+.h2-form-group textarea {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    color: var(--clr-white);
+    font-family: var(--ff-main);
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.h2-form-group input:focus,
+.h2-form-group select:focus,
+.h2-form-group textarea:focus {
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 0 3px rgba(217, 4, 41, 0.1);
+}
+.h2-form-group select {
+    cursor: pointer;
+}
+.h2-form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* ========================
+   SCROLL REVEAL ANIMATIONS
+   ======================== */
+.scroll-reveal {
+    opacity: 0;
+    transition: all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.scroll-reveal.visible {
+    opacity: 1;
+}
+.scroll-reveal[data-anim="slide-left"] {
+    transform: translateX(-60px);
+}
+.scroll-reveal[data-anim="slide-left"].visible {
+    transform: translateX(0);
+}
+.scroll-reveal[data-anim="slide-right"] {
+    transform: translateX(60px);
+}
+.scroll-reveal[data-anim="slide-right"].visible {
+    transform: translateX(0);
+}
+.scroll-reveal[data-anim="slide-up"] {
+    transform: translateY(60px);
+}
+.scroll-reveal[data-anim="slide-up"].visible {
+    transform: translateY(0);
+    transition-delay: calc(var(--delay, 0) * 0.15s);
+}
+.scroll-reveal[data-anim="fade-up"] {
+    transform: translateY(40px);
+}
+.scroll-reveal[data-anim="fade-up"].visible {
+    transform: translateY(0);
+}
+.scroll-reveal[data-anim="scale-up"] {
+    transform: scale(0.9);
+}
+.scroll-reveal[data-anim="scale-up"].visible {
+    transform: scale(1);
+    transition-delay: calc(var(--delay, 0) * 0.12s);
+}
+
+/* ========================
+   TILT CARD EFFECT
+   ======================== */
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+/* ========================
+   KEYFRAME ANIMATIONS
+   ======================== */
+@keyframes h2CharReveal {
+    from {
+        opacity: 0;
+        transform: translateY(60px) rotateX(15deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+@keyframes h2SlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes h2FadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes tickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ========================
+   RESPONSIVE — Tablet
+   ======================== */
+@media (max-width: 1024px) {
+    .h2-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    .h2-hero-left {
+        padding: 8rem 2rem 3rem;
+    }
+    .h2-hero-right {
+        height: 50vh;
+    }
+    .h2-hero-floats {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        padding: 0 2rem 2rem;
+    }
+    .anim-char-reveal {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+
+    .h2-about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .h2-pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+    .h2-price-card.featured {
+        transform: none;
+    }
+    .h2-price-card.featured:hover {
+        transform: translateY(-12px);
+    }
+
+    .h2-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .h2-gal-item.h2-gal-wide {
+        grid-column: span 2;
+    }
+
+    .h2-faq-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .h2-booking-wrap {
+        grid-template-columns: 1fr;
+        padding: 2.5rem;
+    }
+}
+
+/* ========================
+   RESPONSIVE — Mobile
+   ======================== */
+@media (max-width: 768px) {
+    .h2-section {
+        padding: 4rem 0;
+    }
+
+    .h2-hero-left {
+        padding: 7rem 1.5rem 2rem;
+    }
+    .anim-char-reveal {
+        font-size: clamp(2rem, 10vw, 3rem);
+        letter-spacing: -1px;
+    }
+    .h2-hero-btns {
+        flex-direction: column;
+    }
+    .h2-hero-floats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .h2-about-images {
+        padding: 1rem;
+    }
+    .h2-about-img-main img {
+        height: 350px;
+    }
+    .h2-about-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .h2-srv-card {
+        flex: 0 0 310px;
+    }
+
+    .h2-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .h2-gal-item,
+    .h2-gal-item.h2-gal-wide {
+        grid-column: span 1;
+        height: 260px;
+    }
+
+    .h2-review-card {
+        flex: 0 0 320px;
+    }
+
+    .h2-form-row {
+        grid-template-columns: 1fr;
+    }
+    .h2-booking-wrap {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* ========================
+   RESPONSIVE — Small Mobile
+   ======================== */
+@media (max-width: 480px) {
+    .h2-section {
+        padding: 3rem 0;
+    }
+
+    .h2-container {
+        padding-inline: 1rem;
+    }
+
+    .h2-hero-left {
+        padding: 6rem 1rem 2rem;
+    }
+
+    .anim-char-reveal {
+        font-size: clamp(1.8rem, 9vw, 2.5rem);
+    }
+
+    .h2-hero-right {
+        height: 35vh;
+    }
+
+    .h2-hero-btns .h2-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .h2-about-img-main img {
+        height: 260px;
+    }
+
+    .h2-about-stats {
+        gap: 0.75rem;
+    }
+
+    .h2-srv-card {
+        flex: 0 0 280px;
+    }
+
+    .h2-gal-item,
+    .h2-gal-item.h2-gal-wide {
+        height: 200px;
+    }
+
+    .h2-review-card {
+        flex: 0 0 280px;
+        padding: 1.5rem;
+    }
+
+    .h2-booking-wrap {
+        padding: 1.5rem 1rem;
+    }
+
+    .h2-price-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .h2-section-title {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    .h2-faq-question {
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+}
+
+/* ============================================================
+   LIGHT THEME SUPPORT FOR HOME 2
+   ============================================================ */
+.theme-light .home2-body {
+    background: var(--clr-darkest);
+}
+
+.theme-light .h2-hero-left {
+    background: var(--clr-darkest);
+}
+
+.theme-light .h2-hero-overlay {
+    background: linear-gradient(to right, var(--clr-darkest) 0%, transparent 40%),
+                linear-gradient(to top, var(--clr-darkest) 0%, transparent 30%);
+}
+
+.theme-light .h2-hero-ticker {
+    background: rgba(var(--rgb-dark), 0.85);
+    border-top-color: var(--clr-border);
+}
+
+.theme-light .ticker-track span {
+    color: var(--clr-gray);
+}
+
+.theme-light .float-stat {
+    background: rgba(var(--rgb-dark), 0.85);
+    border-color: var(--clr-border);
+}
+
+.theme-light .h2-about-img-float {
+    border-color: var(--clr-darkest);
+}
+
+.theme-light .h2-mini-stat {
+    background: var(--clr-dark-lighter);
+    border-color: var(--clr-border);
+}
+
+.theme-light .h2-services {
+    background: linear-gradient(180deg, var(--clr-darkest) 0%, var(--clr-dark) 50%, var(--clr-darkest) 100%);
+}
+
+.theme-light .h2-srv-card {
+    background: var(--clr-dark-lighter);
+    border-color: var(--clr-border);
+}
+
+.theme-light .h2-srv-num {
+    color: var(--clr-border);
+}
+
+.theme-light .h2-gallery {
+    background: var(--clr-darkest);
+}
+
+.theme-light .h2-reviews {
+    background: var(--clr-darkest);
+}
+
+.theme-light .h2-faq {
+    background: var(--clr-dark);
+}
+
+.theme-light .h2-booking {
+    background: var(--clr-darkest);
+}
+
+.theme-light .h2-gal-overlay {
+    background: linear-gradient(to top, rgba(var(--rgb-white), 0.95) 0%, transparent 70%);
+}
+
+.theme-light .h2-review-card {
+    background: var(--clr-dark-lighter);
+    border-color: var(--clr-border);
+}
+
+.theme-light .h2-review-author strong {
+    color: var(--clr-white);
+}
+
+.theme-light .h2-faq-item {
+    background: var(--clr-dark-lighter);
+    border-bottom-color: var(--clr-border);
+}
+
+.theme-light .h2-faq-plus span {
+    background: var(--clr-white);
+}
+
+.theme-light .h2-booking-wrap {
+    background: var(--clr-darkest);
+    border-color: var(--clr-border);
+}
+
+.theme-light .h2-form {
+    background: var(--clr-dark-lighter);
+    border-color: var(--clr-border);
+}
+
+.theme-light .h2-form h3 {
+    color: var(--clr-white);
+}
+
+.theme-light .h2-form input,
+.theme-light .h2-form select,
+.theme-light .h2-form textarea {
+    background: var(--clr-darkest);
+    border-color: var(--clr-border);
+    color: var(--clr-white);
+}
+
+.theme-light .h2-form label {
+    color: var(--clr-gray);
+}
+
+.theme-light .h2-price-card {
+    background: var(--clr-dark-lighter);
+    border-color: var(--clr-border);
+}
+
+.theme-light .h2-price-header {
+    border-bottom-color: var(--clr-border);
+}
+
+.theme-light .price-features li {
+    border-bottom-color: var(--clr-border);
+}
+
+.theme-light .h2-btn-ghost {
+    border-color: var(--clr-border);
+    color: var(--clr-white);
+}
+
+.theme-light .h2-btn-ghost:hover {
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+}

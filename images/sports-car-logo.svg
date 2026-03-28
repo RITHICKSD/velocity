@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" fill="none" stroke="#D90429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Car body / hood -->
+  <path d="M6 28 C6 28 10 16 16 14 L48 14 C54 16 58 28 58 28" />
+  <!-- Windshield / roof -->
+  <path d="M18 14 L22 6 L42 6 L46 14" />
+  <!-- Front bumper -->
+  <path d="M4 28 L60 28" />
+  <!-- Lower body -->
+  <path d="M4 28 L4 34 L14 34 L14 28" />
+  <path d="M50 28 L50 34 L60 34 L60 28" />
+  <!-- Headlights -->
+  <path d="M8 22 L16 22" stroke-width="3"/>
+  <path d="M48 22 L56 22" stroke-width="3"/>
+  <!-- Grille -->
+  <line x1="26" y1="20" x2="38" y2="20" stroke-width="2"/>
+  <line x1="24" y1="24" x2="40" y2="24" stroke-width="2"/>
+  <!-- Hood scoop -->
+  <path d="M28 12 L36 12" stroke-width="2"/>
+  <!-- Wheels -->
+  <circle cx="14" cy="34" r="4" fill="#D90429"/>
+  <circle cx="50" cy="34" r="4" fill="#D90429"/>
+</svg>

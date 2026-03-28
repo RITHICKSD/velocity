@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Velocity Motorsports</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home2.css">
+    <link rel="icon" href="images/sports-car-logo.svg">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="pricing-page">
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/sports-car-logo.svg" alt="Velocity Logo" class="logo-icon-img">
+                <div class="logo-text">
+                    <span class="logo-main">VELOCITY</span>
+                    <span class="logo-accent">MOTORSPORTS</span>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Home <i data-lucide="chevron-down" class="dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+                            <li><a href="home2.html" class="dropdown-link">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="pricing.html" class="nav-link">Contact</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Dashboard <i data-lucide="chevron-down" class="dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dashboard1.html" class="dropdown-link">User Dashboard</a></li>
+                            <li><a href="dashboard2.html" class="dropdown-link">Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html" class="nav-link nav-login">Login</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn btn-outline btn-icon" aria-label="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button id="dir-toggle" class="btn btn-outline btn-icon" aria-label="Toggle LTR/RTL">
+                    <i data-lucide="globe"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary btn-sm btn-login-header">
+                    <span>Login</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <i data-lucide="align-right"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="section pricing-hero">
+            <div class="pricing-hero-bg">
+                <img src="images/price-product.webp" alt="Pricing Hero" />
+                <div class="pricing-hero-overlay"></div>
+            </div>
+            <div class="container text-center pricing-hero-content">
+                <h1 class="section-title">Transparent <span>Pricing</span></h1>
+                <p class="section-subtitle">Elite care, clear rates. No surprises—just premium service at honest prices.</p>
+            </div>
+        </section>
+
+        <!-- VALUE PROPOSITION SECTION -->
+        <section class="section pricing-intro">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h4 class="section-kicker">Why Velocity?</h4>
+                    <h2 class="section-title">Premium Quality, <span>Honest Pricing</span></h2>
+                </div>
+                <div class="value-props-grid">
+                    <div class="value-prop-card">
+                        <div class="prop-icon">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <h3>Transparent Pricing</h3>
+                        <p>No hidden fees, no surprises. You know exactly what you're paying and why.</p>
+                    </div>
+                    <div class="value-prop-card">
+                        <div class="prop-icon">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <h3>Warranty Backed</h3>
+                        <p>All work backed by our comprehensive warranty. Your investment is protected.</p>
+                    </div>
+                    <div class="value-prop-card">
+                        <div class="prop-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>Performance Proven</h3>
+                        <p>Every upgrade dyno-tested and verified. Real results, real gains.</p>
+                    </div>
+                    <div class="value-prop-card">
+                        <div class="prop-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Expert Support</h3>
+                        <p>Dedicated support from day one. Our experts are always available to help.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING TIERS -->
+        <section class="section pricing-tiers bg-darker">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h4 class="section-kicker">Service Packages</h4>
+                    <h2 class="section-title">Choose Your <span>Perfect Tier</span></h2>
+                    <p class="section-subtitle">From routine care to complete custom builds, we have a package for every need.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- BASELINE TIER -->
+                    <div class="pricing-card">
+                        <div class="tier-badge">Entry Level</div>
+                        <h3>Baseline</h3>
+                        <div class="price-display">
+                            <span class="currency">$</span>
+                            <span class="amount">199</span>
+                            <span class="period">/service</span>
+                        </div>
+                        <p class="tier-description">Perfect for routine maintenance and basic diagnostics.</p>
+                        <ul class="tier-features">
+                            <li><i data-lucide="check"></i> Full OBD2 Diagnostic Scan</li>
+                            <li><i data-lucide="check"></i> 50-Point Physical Inspection</li>
+                            <li><i data-lucide="check"></i> Fluid Level Check & Top-off</li>
+                            <li><i data-lucide="check"></i> Digital Report with Photos</li>
+                            <li><i data-lucide="check"></i> Basic Recommendations</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline-light btn-full">Get Started</a>
+                    </div>
+
+                    <!-- PERFORMANCE TIER (FEATURED) -->
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <div class="tier-badge">Recommended</div>
+                        <h3>Performance</h3>
+                        <div class="price-display">
+                            <span class="currency">$</span>
+                            <span class="amount">499</span>
+                            <span class="period">/service</span>
+                        </div>
+                        <p class="tier-description">Our most popular choice for serious enthusiasts.</p>
+                        <ul class="tier-features">
+                            <li><i data-lucide="check"></i> Everything in Baseline</li>
+                            <li><i data-lucide="check"></i> ECU Calibration & Logging</li>
+                            <li><i data-lucide="check"></i> Synthetic Oil Service</li>
+                            <li><i data-lucide="check"></i> Brake Fluid Flush</li>
+                            <li><i data-lucide="check"></i> Suspension Geometry Check</li>
+                            <li><i data-lucide="check"></i> Priority Support</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-primary btn-full">Select Performance</a>
+                    </div>
+
+                    <!-- BESPOKE TIER -->
+                    <div class="pricing-card">
+                        <div class="tier-badge">Premium</div>
+                        <h3>Bespoke</h3>
+                        <div class="price-display">
+                            <span class="currency"></span>
+                            <span class="amount">Custom</span>
+                            <span class="period">/Quote</span>
+                        </div>
+                        <p class="tier-description">Fully customized solutions for your unique project.</p>
+                        <ul class="tier-features">
+                            <li><i data-lucide="check"></i> Everything in Performance</li>
+                            <li><i data-lucide="check"></i> Engine Out Services</li>
+                            <li><i data-lucide="check"></i> Custom Dyno Tuning</li>
+                            <li><i data-lucide="check"></i> Transmission Rebuild</li>
+                            <li><i data-lucide="check"></i> Dedicated Project Manager</li>
+                            <li><i data-lucide="check"></i> 24/7 Concierge Support</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline-light btn-full">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BASELINE DETAILS SECTION -->
+        <section class="section pricing-detail pricing-baseline">
+            <div class="container">
+                <div class="pricing-detail-grid">
+                    <div class="pricing-detail-img">
+                        <img src="images/ent.webp" alt="Baseline Service">
+                    </div>
+                    <div class="pricing-detail-content">
+                        <h4 class="section-kicker">Entry Level</h4>
+                        <h2>Baseline Maintenance</h2>
+                        <p>Start your Velocity journey with our comprehensive baseline service. Perfect for preventative maintenance and getting a complete picture of your vehicle's health.</p>
+                        <ul class="detail-features">
+                            <li><i data-lucide="check"></i> Complete diagnostic scan</li>
+                            <li><i data-lucide="check"></i> Visual inspection of all systems</li>
+                            <li><i data-lucide="check"></i> Fluid analysis and top-offs</li>
+                            <li><i data-lucide="check"></i> Detailed report with recommendations</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-primary">Start Baseline Service</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERFORMANCE DETAILS SECTION -->
+        <section class="section pricing-detail pricing-performance bg-darker">
+            <div class="container">
+                <div class="pricing-detail-grid pricing-detail-reverse">
+                    <div class="pricing-detail-img">
+                        <img src="images/per.jpg" alt="Performance Service">
+                    </div>
+                    <div class="pricing-detail-content">
+                        <h4 class="section-kicker">Most Popular</h4>
+                        <h2>Performance Upgrade</h2>
+                        <p>Elevate your vehicle's capabilities with our Performance tier. Includes advanced tuning, synthetic fluids, and suspension optimization for a complete driving experience.</p>
+                        <ul class="detail-features">
+                            <li><i data-lucide="check"></i> All Baseline services included</li>
+                            <li><i data-lucide="check"></i> ECU tuning & optimization</li>
+                            <li><i data-lucide="check"></i> Premium synthetic fluids</li>
+                            <li><i data-lucide="check"></i> Brake system upgrade</li>
+                            <li><i data-lucide="check"></i> Suspension calibration</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-primary">Choose Performance</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BESPOKE DETAILS SECTION -->
+        <section class="section pricing-detail pricing-bespoke">
+            <div class="container">
+                <div class="pricing-detail-grid">
+                    <div class="pricing-detail-img">
+                        <img src="images/bespoke.webp" alt="Bespoke Service">
+                    </div>
+                    <div class="pricing-detail-content">
+                        <h4 class="section-kicker">Premium</h4>
+                        <h2>Bespoke Custom Projects</h2>
+                        <p>For those who demand absolute perfection. Our Bespoke tier offers unlimited customization, full engine work, and dedicated expert support throughout your project journey.</p>
+                        <ul class="detail-features">
+                            <li><i data-lucide="check"></i> All Performance services included</li>
+                            <li><i data-lucide="check"></i> Engine rebuilds & modifications</li>
+                            <li><i data-lucide="check"></i> Advanced dyno tuning</li>
+                            <li><i data-lucide="check"></i> Complete transmission work</li>
+                            <li><i data-lucide="check"></i> Dedicated project manager</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-primary">Get Custom Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ / ADDITIONAL SERVICES -->
+        <section class="section pricing-add-ons bg-darker">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h4 class="section-kicker">À La Carte</h4>
+                    <h2 class="section-title">Additional <span>Services</span></h2>
+                    <p class="section-subtitle">Enhance your package with these specialized services.</p>
+                </div>
+
+                <div class="add-ons-grid">
+                    <div class="add-on-item">
+                        <div class="add-on-header">
+                            <h3>Dyno Testing</h3>
+                            <span class="price">$299</span>
+                        </div>
+                        <p>Get precise power and torque measurements before and after tuning.</p>
+                    </div>
+                    <div class="add-on-item">
+                        <div class="add-on-header">
+                            <h3>Paint Protection Film</h3>
+                            <span class="price">$800+</span>
+                        </div>
+                        <p>Protect your paint with our premium PPF application service.</p>
+                    </div>
+                    <div class="add-on-item">
+                        <div class="add-on-header">
+                            <h3>Ceramic Coating</h3>
+                            <span class="price">$600+</span>
+                        </div>
+                        <p>9H ceramic coating for long-lasting protection and shine.</p>
+                    </div>
+                    <div class="add-on-item">
+                        <div class="add-on-header">
+                            <h3>Wheel Alignment</h3>
+                            <span class="price">$199</span>
+                        </div>
+                        <p>Precision alignment for optimal handling and tire life.</p>
+                    </div>
+                    <div class="add-on-item">
+                        <div class="add-on-header">
+                            <h3>Brake Upgrade Kit</h3>
+                            <span class="price">$1,200+</span>
+                        </div>
+                        <p>High-performance brake components and installation.</p>
+                    </div>
+                    <div class="add-on-item">
+                        <div class="add-on-header">
+                            <h3>Suspension Package</h3>
+                            <span class="price">$2,500+</span>
+                        </div>
+                        <p>Coilover systems and suspension geometry optimization.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAYMENT & FINANCING -->
+        <section class="section pricing-payment">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h4 class="section-kicker">Ways to Pay</h4>
+                    <h2 class="section-title">Flexible <span>Payment Options</span></h2>
+                </div>
+
+                <div class="payment-options-grid">
+                    <div class="payment-option">
+                        <h3>Credit Card</h3>
+                        <p>All major credit cards accepted. Payments processed securely.</p>
+                    </div>
+                    <div class="payment-option">
+                        <h3>Financing Available</h3>
+                        <p>Flexible financing for projects over $5,000. 0% APR available.</p>
+                    </div>
+                    <div class="payment-option">
+                        <h3>Payment Plans</h3>
+                        <p>Spread payments over time. Work with our finance team on custom terms.</p>
+                    </div>
+                    <div class="payment-option">
+                        <h3>Bank Transfer</h3>
+                        <p>Direct bank transfer available for large projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="section pricing-cta bg-dark-gradient">
+            <div class="container text-center">
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p class="section-subtitle">Choose your tier and let's build something amazing. Your project awaits.</p>
+                <div class="cta-buttons">
+                    <a href="#booking" class="btn btn-primary btn-lg">Book Your Service</a>
+                    <a href="about.html" class="btn btn-outline-light btn-lg">Talk to Experts</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-darkest">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-white">
+                    <img src="images/sports-car-logo.svg" alt="Velocity Logo" class="logo-icon-img">
+                    <div class="logo-text">
+                        <span class="logo-main">VELOCITY</span>
+                        <span class="logo-accent">MOTORSPORTS</span>
+                    </div>
+                </a>
+                <p class="footer-desc">The ultimate destination for European luxury and exotic automotive maintenance,
+                    diagnostics, and performance optimization.</p>
+                <div class="social-links mt-4">
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Diagnostic Procedures</a></li>
+                    <li><a href="#">Scheduled Maintenance</a></li>
+                    <li><a href="#">Engine Rebuilds</a></li>
+                    <li><a href="#">Performance Tuning</a></li>
+                    <li><a href="#">EV & Hybrid Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#process">The Process</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Hours of Operation</h3>
+                <ul class="hours-list">
+                    <li><span>Monday - Friday</span> <span>8:00 AM - 6:00 PM</span></li>
+                    <li><span>Saturday</span> <span>9:00 AM - 2:00 PM</span></li>
+                    <li><span>Sunday</span> <span class="text-accent">Closed</span></li>
+                </ul>
+                <div class="emergency-contact mt-4">
+                    <strong>24/7 Towing Hoteline:</strong>
+                    <a href="tel:5551234567" class="text-white">555-123-4567</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Velocity Motorsports. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

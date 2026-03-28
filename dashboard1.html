@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard — Velocity Motorsports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard1.css">
+    <link rel="icon" href="images/sports-car-logo.svg">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- ═══════════ SIDEBAR ═══════════ -->
+    <aside class="db-sidebar" id="dbSidebar">
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/sports-car-logo.svg" alt="Velocity" class="sidebar-logo-img">
+            <div class="sidebar-brand-text">
+                <span class="sidebar-brand-main">VELOCITY</span>
+                <span class="sidebar-brand-accent">MOTORSPORTS</span>
+            </div>
+        </a>
+        <nav class="sidebar-nav">
+            <a href="#" class="sidebar-link active" data-tooltip="Dashboard" data-page="dashboard">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="sidebar-link" data-tooltip="My Vehicles" data-page="vehicles">
+                <i data-lucide="car"></i>
+                <span>My Vehicles</span>
+            </a>
+            <a href="#" class="sidebar-link" data-tooltip="Appointments" data-page="appointments">
+                <i data-lucide="calendar-check"></i>
+                <span>Appointments</span>
+            </a>
+            <a href="#" class="sidebar-link" data-tooltip="Service History" data-page="history">
+                <i data-lucide="history"></i>
+                <span>Service History</span>
+            </a>
+            <a href="#" class="sidebar-link" data-tooltip="Invoices" data-page="invoices">
+                <i data-lucide="receipt"></i>
+                <span>Invoices</span>
+            </a>
+            <a href="#" class="sidebar-link" data-tooltip="Analytics" data-page="analytics">
+                <i data-lucide="bar-chart-3"></i>
+                <span>Analytics</span>
+            </a>
+            <a href="#" class="sidebar-link" data-tooltip="Messages" data-page="messages">
+                <i data-lucide="message-square"></i>
+                <span>Messages</span>
+                <span class="sidebar-badge">4</span>
+            </a>
+            <a href="#" class="sidebar-link" data-tooltip="Settings" data-page="settings">
+                <i data-lucide="settings"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="sidebar-link" data-tooltip="Back to Site">
+                <i data-lucide="external-link"></i>
+                <span>Back to Site</span>
+            </a>
+            <a href="#" class="sidebar-link" data-tooltip="Logout">
+                <i data-lucide="log-out"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- ═══════════ MAIN CONTENT ═══════════ -->
+    <main class="db-main">
+
+        <!-- ── TOP HEADER ── -->
+        <header class="db-header">
+            <div class="db-header-left">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="db-search">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Search services, invoices, vehicles..." />
+                </div>
+            </div>
+            <div class="db-header-right">
+                <button class="header-icon-btn" id="dirToggle" title="Toggle RTL/LTR">
+                    <i data-lucide="globe"></i>
+                </button>
+                <button class="header-icon-btn" id="themeToggle" title="Toggle theme">
+                    <i data-lucide="sun"></i>
+                </button>
+                <button class="header-icon-btn notification-btn" title="Notifications">
+                    <i data-lucide="bell"></i>
+                    <span class="notif-dot"></span>
+                </button>
+                <div class="header-user">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="header-avatar">
+                    <div class="header-user-info">
+                        <span class="header-user-name">John Mercer</span>
+                        <span class="header-user-role">Premium Member</span>
+                    </div>
+                    <i data-lucide="chevron-down" class="user-dropdown-arrow"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- ═══════════════════════════════════════════════════════
+             PAGE: DASHBOARD (default)
+             ═══════════════════════════════════════════════════════ -->
+        <div class="db-page active" data-page="dashboard">
+
+            <!-- ── WELCOME BANNER ── -->
+            <section class="db-welcome">
+                <div class="welcome-content">
+                    <div class="welcome-text">
+                        <span class="welcome-greeting">Good afternoon,</span>
+                        <h1 class="welcome-name">Welcome Back, John!</h1>
+                        <p class="welcome-status"><span class="status-dot online"></span> All systems running smoothly</p>
+                    </div>
+                    <div class="welcome-quick-stats">
+                        <div class="quick-stat">
+                            <span class="quick-stat-value" data-count="3">0</span>
+                            <span class="quick-stat-label">Active</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="quick-stat-value" data-count="12">0</span>
+                            <span class="quick-stat-label">Completed</span>
+                        </div>
+                        <div class="quick-stat accent">
+                            <span class="quick-stat-value">A+</span>
+                            <span class="quick-stat-label">Rating</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="welcome-cta">
+                    <i data-lucide="plus"></i>
+                    New Service Request
+                </button>
+            </section>
+
+            <section class="db-metrics">
+                <div class="metric-card" style="--accent: #00b4d8;">
+                    <div class="metric-icon"><i data-lucide="gauge"></i></div>
+                    <div class="metric-info">
+                        <span class="metric-label">Total Mileage</span>
+                        <span class="metric-value" data-count="48520">0</span>
+                    </div>
+                    <span class="metric-trend up"><i data-lucide="trending-up"></i> 2.4%</span>
+                </div>
+                <div class="metric-card" style="--accent: #06d6a0;">
+                    <div class="metric-icon"><i data-lucide="dollar-sign"></i></div>
+                    <div class="metric-info">
+                        <span class="metric-label">Monthly Spend</span>
+                        <span class="metric-value">$<span data-count="1240">0</span></span>
+                    </div>
+                    <span class="metric-trend down"><i data-lucide="trending-down"></i> 15%</span>
+                </div>
+                <div class="metric-card" style="--accent: #f77f00;">
+                    <div class="metric-icon"><i data-lucide="calendar"></i></div>
+                    <div class="metric-info">
+                        <span class="metric-label">Next Service</span>
+                        <span class="metric-value date-val">Mar 12</span>
+                    </div>
+                    <span class="metric-trend neutral">In 11 days</span>
+                </div>
+                <div class="metric-card" style="--accent: #d90429;">
+                    <div class="metric-icon"><i data-lucide="heart-pulse"></i></div>
+                    <div class="metric-info">
+                        <span class="metric-label">Vehicle Health</span>
+                        <span class="metric-value"><span data-count="98">0</span>%</span>
+                    </div>
+                    <span class="metric-trend up">Optimal</span>
+                </div>
+            </section>
+
+            <section class="db-quick-actions">
+                <div class="qa-card">
+                    <div class="qa-icon"><i data-lucide="clipboard-list"></i></div>
+                    <div class="qa-info">
+                        <h3>ACTIVE REQUESTS</h3>
+                        <span class="qa-number" data-count="3">0</span>
+                        <span class="qa-sub"><i data-lucide="arrow-up"></i> 2 new this week</span>
+                    </div>
+                </div>
+                <div class="qa-card">
+                    <div class="qa-icon completed"><i data-lucide="check-circle-2"></i></div>
+                    <div class="qa-info">
+                        <h3>COMPLETED</h3>
+                        <span class="qa-number" data-count="12">0</span>
+                        <span class="qa-sub">Total services completed</span>
+                    </div>
+                </div>
+                <div class="qa-card">
+                    <div class="qa-icon upcoming"><i data-lucide="calendar-clock"></i></div>
+                    <div class="qa-info">
+                        <h3>UPCOMING</h3>
+                        <span class="qa-number" data-count="1">0</span>
+                        <span class="qa-sub">Scheduled for next week</span>
+                    </div>
+                </div>
+                <div class="qa-card">
+                    <div class="qa-icon saved"><i data-lucide="map-pin"></i></div>
+                    <div class="qa-info">
+                        <h3>SAVED VEHICLES</h3>
+                        <span class="qa-number" data-count="2">0</span>
+                        <span class="qa-sub">Registered vehicles</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="db-charts-row">
+                <div class="db-card chart-card wide">
+                    <div class="card-header">
+                        <h2>Spending Overview</h2>
+                        <div class="chart-tabs">
+                            <button class="chart-tab active" data-period="monthly">Monthly</button>
+                            <button class="chart-tab" data-period="weekly">Weekly</button>
+                        </div>
+                    </div>
+                    <div class="chart-container" id="spendingChart">
+                        <canvas id="spendingCanvas"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        <span class="legend-item"><span class="legend-dot" style="background:#D90429;"></span> Services</span>
+                        <span class="legend-item"><span class="legend-dot" style="background:#06d6a0;"></span> Parts</span>
+                        <span class="legend-item"><span class="legend-dot" style="background:#00b4d8;"></span> Maintenance</span>
+                    </div>
+                </div>
+                <div class="db-card chart-card">
+                    <div class="card-header">
+                        <h2>Vehicle Health</h2>
+                        <span class="card-badge good">Good</span>
+                    </div>
+                    <div class="gauge-container">
+                        <svg class="gauge-svg" viewBox="0 0 200 120">
+                            <defs>
+                                <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#d90429"/>
+                                    <stop offset="50%" stop-color="#f77f00"/>
+                                    <stop offset="100%" stop-color="#06d6a0"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="14" stroke-linecap="round"/>
+                            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="url(#gaugeGrad)" stroke-width="14" stroke-linecap="round" class="gauge-fill" stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+                            <text x="100" y="85" text-anchor="middle" class="gauge-value">98%</text>
+                            <text x="100" y="105" text-anchor="middle" class="gauge-label">Optimal</text>
+                        </svg>
+                    </div>
+                    <div class="health-details">
+                        <div class="health-item"><span class="health-dot" style="background:#06d6a0"></span><span>Engine</span><span class="health-val">100%</span></div>
+                        <div class="health-item"><span class="health-dot" style="background:#06d6a0"></span><span>Brakes</span><span class="health-val">95%</span></div>
+                        <div class="health-item"><span class="health-dot" style="background:#f77f00"></span><span>Tires</span><span class="health-val">78%</span></div>
+                        <div class="health-item"><span class="health-dot" style="background:#06d6a0"></span><span>Battery</span><span class="health-val">92%</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="db-triple-row">
+                <div class="db-card">
+                    <div class="card-header"><h2>Spending Breakdown</h2></div>
+                    <div class="donut-container">
+                        <svg class="donut-svg" viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="24"/>
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="#D90429" stroke-width="24" stroke-dasharray="201.06 301.59" stroke-dashoffset="0" class="donut-segment" transform="rotate(-90 100 100)"/>
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="#06d6a0" stroke-width="24" stroke-dasharray="150.80 351.86" stroke-dashoffset="-201.06" class="donut-segment" transform="rotate(-90 100 100)"/>
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="#00b4d8" stroke-width="24" stroke-dasharray="100.53 401.32" stroke-dashoffset="-351.86" class="donut-segment" transform="rotate(-90 100 100)"/>
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="#f77f00" stroke-width="24" stroke-dasharray="50.27 452.39" stroke-dashoffset="-452.39" class="donut-segment" transform="rotate(-90 100 100)"/>
+                            <text x="100" y="95" text-anchor="middle" class="donut-total">$4,820</text>
+                            <text x="100" y="115" text-anchor="middle" class="donut-label">Total Spent</text>
+                        </svg>
+                    </div>
+                    <div class="donut-legend">
+                        <div class="donut-legend-item"><span style="background:#D90429"></span> Engine & Tune — 40%</div>
+                        <div class="donut-legend-item"><span style="background:#06d6a0"></span> Maintenance — 30%</div>
+                        <div class="donut-legend-item"><span style="background:#00b4d8"></span> Detailing — 20%</div>
+                        <div class="donut-legend-item"><span style="background:#f77f00"></span> Parts — 10%</div>
+                    </div>
+                </div>
+                <div class="db-card">
+                    <div class="card-header"><h2>Activity Feed</h2></div>
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <div class="activity-icon" style="background: rgba(6,214,160,0.15); color:#06d6a0;"><i data-lucide="check-circle"></i></div>
+                            <div class="activity-content"><p><strong>Oil Change</strong> completed for BMW M4</p><span class="activity-time">2 hours ago</span></div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon" style="background: rgba(0,180,216,0.15); color:#00b4d8;"><i data-lucide="calendar-check"></i></div>
+                            <div class="activity-content"><p><strong>Appointment booked</strong> — Engine Service on Mar 12</p><span class="activity-time">1 day ago</span></div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon" style="background: rgba(247,127,0,0.15); color:#f77f00;"><i data-lucide="alert-triangle"></i></div>
+                            <div class="activity-content"><p><strong>Tire pressure low</strong> — Mercedes-AMG GT front left</p><span class="activity-time">2 days ago</span></div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon" style="background: rgba(217,4,41,0.15); color:#D90429;"><i data-lucide="star"></i></div>
+                            <div class="activity-content"><p>You rated <strong>Mike R.</strong> ★★★★★</p><span class="activity-time">3 days ago</span></div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon" style="background: rgba(6,214,160,0.15); color:#06d6a0;"><i data-lucide="receipt"></i></div>
+                            <div class="activity-content"><p><strong>Invoice #1247</strong> paid — $245.00</p><span class="activity-time">5 days ago</span></div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon" style="background: rgba(0,180,216,0.15); color:#00b4d8;"><i data-lucide="shield-check"></i></div>
+                            <div class="activity-content"><p><strong>Warranty extended</strong> — BMW M4 until 2028</p><span class="activity-time">1 week ago</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="db-card loyalty-card">
+                    <div class="card-header"><h2>Loyalty Rewards</h2></div>
+                    <div class="loyalty-ring-wrap">
+                        <svg class="loyalty-ring" viewBox="0 0 150 150">
+                            <circle cx="75" cy="75" r="60" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="10"/>
+                            <circle cx="75" cy="75" r="60" fill="none" stroke="#D90429" stroke-width="10" stroke-dasharray="283" stroke-dashoffset="283" stroke-linecap="round" class="loyalty-progress" transform="rotate(-90 75 75)"/>
+                            <text x="75" y="70" text-anchor="middle" class="loyalty-points">2,480</text>
+                            <text x="75" y="90" text-anchor="middle" class="loyalty-label">Points</text>
+                        </svg>
+                    </div>
+                    <div class="loyalty-tier">
+                        <span class="tier-badge gold">GOLD MEMBER</span>
+                        <p>520 pts to Platinum tier</p>
+                    </div>
+                    <div class="loyalty-perks">
+                        <div class="perk"><i data-lucide="percent"></i> 15% off services</div>
+                        <div class="perk"><i data-lucide="zap"></i> Priority booking</div>
+                        <div class="perk"><i data-lucide="gift"></i> Free annual detailing</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             PAGE: MY VEHICLES
+             ═══════════════════════════════════════════════════════ -->
+        <div class="db-page" data-page="vehicles">
+            <div class="page-title-bar">
+                <h1>My Vehicles</h1>
+                <button class="welcome-cta"><i data-lucide="plus"></i> Add New Vehicle</button>
+            </div>
+
+            <!-- Vehicle Stats -->
+            <section class="db-metrics">
+                <div class="metric-card" style="--accent: #00b4d8;">
+                    <div class="metric-icon"><i data-lucide="car"></i></div>
+                    <div class="metric-info"><span class="metric-label">Total Vehicles</span><span class="metric-value">2</span></div>
+                    <span class="metric-trend neutral">Registered</span>
+                </div>
+                <div class="metric-card" style="--accent: #06d6a0;">
+                    <div class="metric-icon"><i data-lucide="gauge"></i></div>
+                    <div class="metric-info"><span class="metric-label">Combined Mileage</span><span class="metric-value">32,520</span></div>
+                    <span class="metric-trend up"><i data-lucide="trending-up"></i> 1.8%</span>
+                </div>
+                <div class="metric-card" style="--accent: #f77f00;">
+                    <div class="metric-icon"><i data-lucide="shield-check"></i></div>
+                    <div class="metric-info"><span class="metric-label">Warranty Active</span><span class="metric-value">2/2</span></div>
+                    <span class="metric-trend up">All covered</span>
+                </div>
+                <div class="metric-card" style="--accent: #d90429;">
+                    <div class="metric-icon"><i data-lucide="heart-pulse"></i></div>
+                    <div class="metric-info"><span class="metric-label">Avg Health</span><span class="metric-value">96%</span></div>
+                    <span class="metric-trend up">Excellent</span>
+                </div>
+            </section>
+
+            <!-- Vehicle Cards -->
+            <section class="vehicle-grid">
+                <div class="db-card vehicle-detail-card">
+                    <div class="vdc-image">
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=500&h=280&fit=crop" alt="BMW M4">
+                        <span class="vdc-badge primary">PRIMARY</span>
+                    </div>
+                    <div class="vdc-body">
+                        <h3>BMW M4 Competition</h3>
+                        <span class="vehicle-plate">VMX-2024</span>
+                        <div class="vdc-stats">
+                            <div class="vdc-stat"><i data-lucide="gauge"></i><span>24,180 mi</span></div>
+                            <div class="vdc-stat"><i data-lucide="fuel"></i><span>68% Fuel</span></div>
+                            <div class="vdc-stat"><i data-lucide="calendar"></i><span>2024 Model</span></div>
+                            <div class="vdc-stat"><i data-lucide="palette"></i><span>Alpine White</span></div>
+                        </div>
+                        <div class="vdc-health-bar">
+                            <span>Health</span>
+                            <div class="progress-track"><div class="progress-fill" style="width: 98%; background: var(--green);"></div></div>
+                            <span>98%</span>
+                        </div>
+                        <div class="vdc-actions">
+                            <button class="card-action-btn"><i data-lucide="wrench"></i> Service</button>
+                            <button class="card-action-btn"><i data-lucide="file-text"></i> Details</button>
+                            <button class="card-action-btn"><i data-lucide="trash-2"></i> Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="db-card vehicle-detail-card">
+                    <div class="vdc-image">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=500&h=280&fit=crop" alt="Mercedes AMG">
+                        <span class="vdc-badge">SECONDARY</span>
+                    </div>
+                    <div class="vdc-body">
+                        <h3>Mercedes-AMG GT</h3>
+                        <span class="vehicle-plate">AMG-2025</span>
+                        <div class="vdc-stats">
+                            <div class="vdc-stat"><i data-lucide="gauge"></i><span>8,340 mi</span></div>
+                            <div class="vdc-stat"><i data-lucide="fuel"></i><span>91% Fuel</span></div>
+                            <div class="vdc-stat"><i data-lucide="calendar"></i><span>2025 Model</span></div>
+                            <div class="vdc-stat"><i data-lucide="palette"></i><span>Obsidian Black</span></div>
+                        </div>
+                        <div class="vdc-health-bar">
+                            <span>Health</span>
+                            <div class="progress-track"><div class="progress-fill" style="width: 94%; background: var(--green);"></div></div>
+                            <span>94%</span>
+                        </div>
+                        <div class="vdc-actions">
+                            <button class="card-action-btn"><i data-lucide="wrench"></i> Service</button>
+                            <button class="card-action-btn"><i data-lucide="file-text"></i> Details</button>
+                            <button class="card-action-btn"><i data-lucide="trash-2"></i> Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             PAGE: APPOINTMENTS
+             ═══════════════════════════════════════════════════════ -->
+        <div class="db-page" data-page="appointments">
+            <div class="page-title-bar">
+                <h1>Appointments</h1>
+                <button class="welcome-cta"><i data-lucide="calendar-plus"></i> Book Appointment</button>
+            </div>
+
+            <section class="db-metrics">
+                <div class="metric-card" style="--accent: #06d6a0;">
+                    <div class="metric-icon"><i data-lucide="check-circle"></i></div>
+                    <div class="metric-info"><span class="metric-label">Confirmed</span><span class="metric-value">1</span></div>
+                    <span class="metric-trend up">Ready</span>
+                </div>
+                <div class="metric-card" style="--accent: #f77f00;">
+                    <div class="metric-icon"><i data-lucide="clock"></i></div>
+                    <div class="metric-info"><span class="metric-label">Pending</span><span class="metric-value">2</span></div>
+                    <span class="metric-trend neutral">Awaiting</span>
+                </div>
+                <div class="metric-card" style="--accent: #00b4d8;">
+                    <div class="metric-icon"><i data-lucide="calendar-check"></i></div>
+                    <div class="metric-info"><span class="metric-label">This Month</span><span class="metric-value">3</span></div>
+                    <span class="metric-trend up">Scheduled</span>
+                </div>
+                <div class="metric-card" style="--accent: #d90429;">
+                    <div class="metric-icon"><i data-lucide="calendar-x"></i></div>
+                    <div class="metric-info"><span class="metric-label">Cancelled</span><span class="metric-value">0</span></div>
+                    <span class="metric-trend up">None</span>
+                </div>
+            </section>
+
+            <!-- Calendar-style appointment list -->
+            <section class="db-card appt-full-list">
+                <div class="card-header"><h2>Scheduled Appointments</h2></div>
+                <div class="appt-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker confirmed"></div>
+                        <div class="timeline-card">
+                            <div class="appt-date"><span class="appt-day">12</span><span class="appt-month">MAR</span></div>
+                            <div class="appt-info">
+                                <h4>Full Engine Service</h4>
+                                <span class="appt-vehicle"><i data-lucide="car"></i> BMW M4 Competition</span>
+                                <span class="appt-time"><i data-lucide="clock"></i> 10:00 AM — 2:00 PM</span>
+                                <span class="appt-time"><i data-lucide="map-pin"></i> Bay 3 — Velocity Main Shop</span>
+                            </div>
+                            <div class="appt-right">
+                                <span class="appt-status confirmed">Confirmed</span>
+                                <span class="appt-cost">Est. $680</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker pending"></div>
+                        <div class="timeline-card">
+                            <div class="appt-date"><span class="appt-day">20</span><span class="appt-month">MAR</span></div>
+                            <div class="appt-info">
+                                <h4>Tire Rotation & Balance</h4>
+                                <span class="appt-vehicle"><i data-lucide="car"></i> Mercedes-AMG GT</span>
+                                <span class="appt-time"><i data-lucide="clock"></i> 9:00 AM — 11:00 AM</span>
+                                <span class="appt-time"><i data-lucide="map-pin"></i> Bay 1 — Velocity Main Shop</span>
+                            </div>
+                            <div class="appt-right">
+                                <span class="appt-status pending">Pending</span>
+                                <span class="appt-cost">Est. $220</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker pending"></div>
+                        <div class="timeline-card">
+                            <div class="appt-date"><span class="appt-day">28</span><span class="appt-month">MAR</span></div>
+                            <div class="appt-info">
+                                <h4>Brake Pad Replacement</h4>
+                                <span class="appt-vehicle"><i data-lucide="car"></i> BMW M4 Competition</span>
+                                <span class="appt-time"><i data-lucide="clock"></i> 1:00 PM — 3:30 PM</span>
+                                <span class="appt-time"><i data-lucide="map-pin"></i> Bay 5 — Velocity Main Shop</span>
+                            </div>
+                            <div class="appt-right">
+                                <span class="appt-status pending">Pending</span>
+                                <span class="appt-cost">Est. $350</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item past">
+                        <div class="timeline-marker done"></div>
+                        <div class="timeline-card">
+                            <div class="appt-date"><span class="appt-day">28</span><span class="appt-month">FEB</span></div>
+                            <div class="appt-info">
+                                <h4>Engine Oil Change</h4>
+                                <span class="appt-vehicle"><i data-lucide="car"></i> BMW M4 Competition</span>
+                                <span class="appt-time"><i data-lucide="clock"></i> 10:00 AM — 11:30 AM</span>
+                            </div>
+                            <div class="appt-right">
+                                <span class="appt-status" style="background:rgba(6,214,160,0.12);color:var(--green);">Done</span>
+                                <span class="appt-cost">$189</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             PAGE: SERVICE HISTORY
+             ═══════════════════════════════════════════════════════ -->
+        <div class="db-page" data-page="history">
+            <div class="page-title-bar">
+                <h1>Service History</h1>
+                <button class="welcome-cta"><i data-lucide="download"></i> Export All</button>
+            </div>
+
+            <section class="db-metrics">
+                <div class="metric-card" style="--accent: #06d6a0;">
+                    <div class="metric-icon"><i data-lucide="wrench"></i></div>
+                    <div class="metric-info"><span class="metric-label">Total Services</span><span class="metric-value">18</span></div>
+                    <span class="metric-trend up">All time</span>
+                </div>
+                <div class="metric-card" style="--accent: #00b4d8;">
+                    <div class="metric-icon"><i data-lucide="dollar-sign"></i></div>
+                    <div class="metric-info"><span class="metric-label">Total Spent</span><span class="metric-value">$4,820</span></div>
+                    <span class="metric-trend neutral">Lifetime</span>
+                </div>
+                <div class="metric-card" style="--accent: #f77f00;">
+                    <div class="metric-icon"><i data-lucide="star"></i></div>
+                    <div class="metric-info"><span class="metric-label">Avg Rating</span><span class="metric-value">4.9</span></div>
+                    <span class="metric-trend up">Excellent</span>
+                </div>
+                <div class="metric-card" style="--accent: #d90429;">
+                    <div class="metric-icon"><i data-lucide="user"></i></div>
+                    <div class="metric-info"><span class="metric-label">Fav Technician</span><span class="metric-value date-val">Mike R.</span></div>
+                    <span class="metric-trend up">8 services</span>
+                </div>
+            </section>
+
+            <section class="db-card table-card">
+                <div class="card-header">
+                    <h2>Complete History</h2>
+                    <div class="table-controls">
+                        <div class="table-search"><i data-lucide="search"></i><input type="text" placeholder="Search history..."></div>
+                        <select class="table-filter">
+                            <option>All Vehicles</option>
+                            <option>BMW M4 Competition</option>
+                            <option>Mercedes-AMG GT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="db-table">
+                        <thead><tr><th>Service</th><th>Vehicle</th><th>Date</th><th>Cost</th><th>Technician</th><th>Rating</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Engine Oil Change</strong></td><td>BMW M4 Competition</td><td>Feb 28, 2026</td><td>$189.00</td><td><div class="tech-cell"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt=""><span>Mike R.</span></div></td><td>★★★★★</td><td><span class="table-badge completed">Completed</span></td></tr>
+                            <tr><td><strong>Wheel Alignment</strong></td><td>Mercedes-AMG GT</td><td>Feb 15, 2026</td><td>$245.00</td><td><div class="tech-cell"><img src="https://randomuser.me/api/portraits/men/67.jpg" alt=""><span>David K.</span></div></td><td>★★★★★</td><td><span class="table-badge completed">Completed</span></td></tr>
+                            <tr><td><strong>Brake Fluid Flush</strong></td><td>BMW M4 Competition</td><td>Feb 3, 2026</td><td>$120.00</td><td><div class="tech-cell"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt=""><span>Sarah L.</span></div></td><td>★★★★☆</td><td><span class="table-badge completed">Completed</span></td></tr>
+                            <tr><td><strong>Performance Tune-Up</strong></td><td>BMW M4 Competition</td><td>Jan 22, 2026</td><td>$480.00</td><td><div class="tech-cell"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt=""><span>Mike R.</span></div></td><td>★★★★★</td><td><span class="table-badge completed">Completed</span></td></tr>
+                            <tr><td><strong>A/C System Check</strong></td><td>Mercedes-AMG GT</td><td>Jan 10, 2026</td><td>$95.00</td><td><div class="tech-cell"><img src="https://randomuser.me/api/portraits/men/67.jpg" alt=""><span>David K.</span></div></td><td>★★★★★</td><td><span class="table-badge completed">Completed</span></td></tr>
+                            <tr><td><strong>Premium Detailing</strong></td><td>BMW M4 Competition</td><td>Dec 20, 2025</td><td>$350.00</td><td><div class="tech-cell"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt=""><span>Sarah L.</span></div></td><td>★★★★★</td><td><span class="table-badge completed">Completed</span></td></tr>
+                            <tr><td><strong>Transmission Service</strong></td><td>Mercedes-AMG GT</td><td>Nov 15, 2025</td><td>$720.00</td><td><div class="tech-cell"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt=""><span>Mike R.</span></div></td><td>★★★★★</td><td><span class="table-badge completed">Completed</span></td></tr>
+                            <tr><td><strong>Suspension Check</strong></td><td>BMW M4 Competition</td><td>Oct 28, 2025</td><td>$310.00</td><td><div class="tech-cell"><img src="https://randomuser.me/api/portraits/men/67.jpg" alt=""><span>David K.</span></div></td><td>★★★★☆</td><td><span class="table-badge completed">Completed</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             PAGE: INVOICES
+             ═══════════════════════════════════════════════════════ -->
+        <div class="db-page" data-page="invoices">
+            <div class="page-title-bar">
+                <h1>Invoices & Billing</h1>
+                <button class="welcome-cta"><i data-lucide="download"></i> Download All</button>
+            </div>
+
+            <section class="db-metrics">
+                <div class="metric-card" style="--accent: #06d6a0;">
+                    <div class="metric-icon"><i data-lucide="check-circle"></i></div>
+                    <div class="metric-info"><span class="metric-label">Paid</span><span class="metric-value">$4,280</span></div>
+                    <span class="metric-trend up">All clear</span>
+                </div>
+                <div class="metric-card" style="--accent: #f77f00;">
+                    <div class="metric-icon"><i data-lucide="alert-circle"></i></div>
+                    <div class="metric-info"><span class="metric-label">Pending</span><span class="metric-value">$540</span></div>
+                    <span class="metric-trend neutral">1 invoice</span>
+                </div>
+                <div class="metric-card" style="--accent: #d90429;">
+                    <div class="metric-icon"><i data-lucide="x-circle"></i></div>
+                    <div class="metric-info"><span class="metric-label">Overdue</span><span class="metric-value">$0</span></div>
+                    <span class="metric-trend up">None</span>
+                </div>
+                <div class="metric-card" style="--accent: #00b4d8;">
+                    <div class="metric-icon"><i data-lucide="receipt"></i></div>
+                    <div class="metric-info"><span class="metric-label">Total Invoices</span><span class="metric-value">14</span></div>
+                    <span class="metric-trend neutral">All time</span>
+                </div>
+            </section>
+
+            <section class="db-card table-card">
+                <div class="card-header"><h2>Invoice List</h2></div>
+                <div class="table-responsive">
+                    <table class="db-table">
+                        <thead><tr><th>Invoice #</th><th>Service</th><th>Vehicle</th><th>Date</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>#INV-1250</strong></td><td>Full Engine Service</td><td>BMW M4</td><td>Mar 12, 2026</td><td>$680.00</td><td><span class="table-badge pending">Pending</span></td><td><button class="card-action-btn"><i data-lucide="credit-card"></i> Pay</button></td></tr>
+                            <tr><td><strong>#INV-1249</strong></td><td>Engine Oil Change</td><td>BMW M4</td><td>Feb 28, 2026</td><td>$189.00</td><td><span class="table-badge completed">Paid</span></td><td><button class="card-action-btn"><i data-lucide="download"></i> PDF</button></td></tr>
+                            <tr><td><strong>#INV-1247</strong></td><td>Wheel Alignment</td><td>Mercedes-AMG</td><td>Feb 15, 2026</td><td>$245.00</td><td><span class="table-badge completed">Paid</span></td><td><button class="card-action-btn"><i data-lucide="download"></i> PDF</button></td></tr>
+                            <tr><td><strong>#INV-1245</strong></td><td>Brake Fluid Flush</td><td>BMW M4</td><td>Feb 3, 2026</td><td>$120.00</td><td><span class="table-badge completed">Paid</span></td><td><button class="card-action-btn"><i data-lucide="download"></i> PDF</button></td></tr>
+                            <tr><td><strong>#INV-1240</strong></td><td>Performance Tune-Up</td><td>BMW M4</td><td>Jan 22, 2026</td><td>$480.00</td><td><span class="table-badge completed">Paid</span></td><td><button class="card-action-btn"><i data-lucide="download"></i> PDF</button></td></tr>
+                            <tr><td><strong>#INV-1238</strong></td><td>A/C System Check</td><td>Mercedes-AMG</td><td>Jan 10, 2026</td><td>$95.00</td><td><span class="table-badge completed">Paid</span></td><td><button class="card-action-btn"><i data-lucide="download"></i> PDF</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             PAGE: ANALYTICS
+             ═══════════════════════════════════════════════════════ -->
+        <div class="db-page" data-page="analytics">
+            <div class="page-title-bar">
+                <h1>Analytics & Insights</h1>
+                <div class="chart-tabs">
+                    <button class="chart-tab active">6 Months</button>
+                    <button class="chart-tab">1 Year</button>
+                    <button class="chart-tab">All Time</button>
+                </div>
+            </div>
+
+            <section class="db-metrics">
+                <div class="metric-card" style="--accent: #00b4d8;">
+                    <div class="metric-icon"><i data-lucide="trending-up"></i></div>
+                    <div class="metric-info"><span class="metric-label">Avg Monthly Cost</span><span class="metric-value">$803</span></div>
+                    <span class="metric-trend down"><i data-lucide="trending-down"></i> 8%</span>
+                </div>
+                <div class="metric-card" style="--accent: #06d6a0;">
+                    <div class="metric-icon"><i data-lucide="zap"></i></div>
+                    <div class="metric-info"><span class="metric-label">Service Frequency</span><span class="metric-value">2.3x</span></div>
+                    <span class="metric-trend neutral">Per month</span>
+                </div>
+                <div class="metric-card" style="--accent: #f77f00;">
+                    <div class="metric-icon"><i data-lucide="clock"></i></div>
+                    <div class="metric-info"><span class="metric-label">Avg Wait Time</span><span class="metric-value date-val">2.1 hrs</span></div>
+                    <span class="metric-trend down"><i data-lucide="trending-down"></i> 12%</span>
+                </div>
+                <div class="metric-card" style="--accent: #d90429;">
+                    <div class="metric-icon"><i data-lucide="target"></i></div>
+                    <div class="metric-info"><span class="metric-label">Money Saved</span><span class="metric-value">$720</span></div>
+                    <span class="metric-trend up">Loyalty perks</span>
+                </div>
+            </section>
+
+            <section class="db-charts-row">
+                <div class="db-card chart-card wide">
+                    <div class="card-header"><h2>Cost Trend Analysis</h2></div>
+                    <div class="chart-container" id="analyticsChart">
+                        <canvas id="analyticsCanvas"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        <span class="legend-item"><span class="legend-dot" style="background:#D90429;"></span> Your Spend</span>
+                        <span class="legend-item"><span class="legend-dot" style="background:#00b4d8;"></span> Avg Customer</span>
+                    </div>
+                </div>
+                <div class="db-card">
+                    <div class="card-header"><h2>Service Category Split</h2></div>
+                    <div class="analytics-bars">
+                        <div class="a-bar-item"><span class="a-bar-label">Engine Work</span><div class="a-bar-track"><div class="a-bar-fill" style="width:40%;background:#D90429;"></div></div><span class="a-bar-val">40%</span></div>
+                        <div class="a-bar-item"><span class="a-bar-label">Maintenance</span><div class="a-bar-track"><div class="a-bar-fill" style="width:25%;background:#06d6a0;"></div></div><span class="a-bar-val">25%</span></div>
+                        <div class="a-bar-item"><span class="a-bar-label">Detailing</span><div class="a-bar-track"><div class="a-bar-fill" style="width:15%;background:#00b4d8;"></div></div><span class="a-bar-val">15%</span></div>
+                        <div class="a-bar-item"><span class="a-bar-label">Tire & Brakes</span><div class="a-bar-track"><div class="a-bar-fill" style="width:12%;background:#f77f00;"></div></div><span class="a-bar-val">12%</span></div>
+                        <div class="a-bar-item"><span class="a-bar-label">Electrical</span><div class="a-bar-track"><div class="a-bar-fill" style="width:8%;background:#a855f7;"></div></div><span class="a-bar-val">8%</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="db-split-row">
+                <div class="db-card">
+                    <div class="card-header"><h2>Cost per Vehicle</h2></div>
+                    <div class="analytics-vehicle-compare">
+                        <div class="avc-item">
+                            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=60&h=40&fit=crop" alt="">
+                            <div class="avc-info"><h4>BMW M4 Competition</h4><span>$3,150 total</span></div>
+                            <div class="avc-ring"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="4"/><circle cx="20" cy="20" r="16" fill="none" stroke="#D90429" stroke-width="4" stroke-dasharray="65.3 34.7" stroke-dashoffset="25" stroke-linecap="round" transform="rotate(-90 20 20)"/></svg><span>65%</span></div>
+                        </div>
+                        <div class="avc-item">
+                            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=60&h=40&fit=crop" alt="">
+                            <div class="avc-info"><h4>Mercedes-AMG GT</h4><span>$1,670 total</span></div>
+                            <div class="avc-ring"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="4"/><circle cx="20" cy="20" r="16" fill="none" stroke="#06d6a0" stroke-width="4" stroke-dasharray="35 65" stroke-dashoffset="25" stroke-linecap="round" transform="rotate(-90 20 20)"/></svg><span>35%</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="db-card">
+                    <div class="card-header"><h2>Monthly Comparison</h2></div>
+                    <div class="month-compare">
+                        <div class="mc-row"><span>February 2026</span><div class="mc-bar"><div style="width:62%;background:var(--accent);"></div></div><span>$434</span></div>
+                        <div class="mc-row"><span>January 2026</span><div class="mc-bar"><div style="width:82%;background:var(--blue);"></div></div><span>$575</span></div>
+                        <div class="mc-row"><span>December 2025</span><div class="mc-bar"><div style="width:50%;background:var(--green);"></div></div><span>$350</span></div>
+                        <div class="mc-row"><span>November 2025</span><div class="mc-bar"><div style="width:100%;background:var(--orange);"></div></div><span>$720</span></div>
+                        <div class="mc-row"><span>October 2025</span><div class="mc-bar"><div style="width:44%;background:#a855f7;"></div></div><span>$310</span></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             PAGE: MESSAGES
+             ═══════════════════════════════════════════════════════ -->
+        <div class="db-page" data-page="messages">
+            <div class="page-title-bar">
+                <h1>Messages</h1>
+                <button class="welcome-cta"><i data-lucide="pen-square"></i> New Message</button>
+            </div>
+
+            <section class="messages-layout">
+                <div class="db-card msg-sidebar-card">
+                    <div class="msg-search">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search conversations...">
+                    </div>
+                    <div class="msg-list">
+                        <div class="msg-item active">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="">
+                            <div class="msg-preview">
+                                <h4>Mike R. <span class="msg-time">2h ago</span></h4>
+                                <p>Your BMW M4 oil change is complete! Everything looks great...</p>
+                            </div>
+                            <span class="msg-unread">1</span>
+                        </div>
+                        <div class="msg-item">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="">
+                            <div class="msg-preview">
+                                <h4>David K. <span class="msg-time">1d ago</span></h4>
+                                <p>Hi John, your Mercedes alignment is scheduled for the 20th...</p>
+                            </div>
+                            <span class="msg-unread">2</span>
+                        </div>
+                        <div class="msg-item">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                            <div class="msg-preview">
+                                <h4>Sarah L. <span class="msg-time">3d ago</span></h4>
+                                <p>Brake pad assessment shows you'll need replacement soon...</p>
+                            </div>
+                            <span class="msg-unread">1</span>
+                        </div>
+                        <div class="msg-item">
+                            <div class="msg-avatar-system"><i data-lucide="bell"></i></div>
+                            <div class="msg-preview">
+                                <h4>System Alert <span class="msg-time">5d ago</span></h4>
+                                <p>Tire pressure notification for your Mercedes-AMG GT...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="db-card msg-chat-card">
+                    <div class="chat-header">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="">
+                        <div><h4>Mike R.</h4><span>Senior Technician • Online</span></div>
+                    </div>
+                    <div class="chat-body">
+                        <div class="chat-msg received">
+                            <p>Hey John! Just finished up the oil change on your BMW M4. Used the Castrol EDGE 5W-30 as requested.</p>
+                            <span class="chat-time">2:15 PM</span>
+                        </div>
+                        <div class="chat-msg received">
+                            <p>I also noticed your air filter could use a replacement next visit. Not urgent but worth keeping in mind.</p>
+                            <span class="chat-time">2:16 PM</span>
+                        </div>
+                        <div class="chat-msg sent">
+                            <p>Thanks Mike! Great work as always. I'll get the air filter done during the engine service on the 12th.</p>
+                            <span class="chat-time">2:30 PM</span>
+                        </div>
+                        <div class="chat-msg received">
+                            <p>Perfect plan! I'll make a note on the appointment. See you then! 👍</p>
+                            <span class="chat-time">2:32 PM</span>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Type a message...">
+                        <button class="chat-send"><i data-lucide="send"></i></button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════
+             PAGE: SETTINGS
+             ═══════════════════════════════════════════════════════ -->
+        <div class="db-page" data-page="settings">
+            <div class="page-title-bar">
+                <h1>Settings</h1>
+            </div>
+
+            <section class="settings-grid">
+                <div class="db-card settings-section">
+                    <div class="card-header"><h2>Profile Information</h2></div>
+                    <div class="settings-profile-top">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" class="settings-avatar">
+                        <button class="card-action-btn"><i data-lucide="camera"></i> Change Photo</button>
+                    </div>
+                    <div class="settings-form">
+                        <div class="form-group"><label>Full Name</label><input type="text" value="John Mercer"></div>
+                        <div class="form-group"><label>Email</label><input type="email" value="john.mercer@email.com"></div>
+                        <div class="form-group"><label>Phone</label><input type="tel" value="+1 (555) 234-5678"></div>
+                        <div class="form-group"><label>Address</label><input type="text" value="1247 Oak Street, Beverly Hills, CA 90210"></div>
+                    </div>
+                    <button class="welcome-cta" style="margin-top:20px;width:auto;"><i data-lucide="save"></i> Save Changes</button>
+                </div>
+
+                <div class="db-card settings-section">
+                    <div class="card-header"><h2>Preferences</h2></div>
+                    <div class="settings-toggles">
+                        <div class="setting-row">
+                            <div><h4>Email Notifications</h4><p>Receive service updates via email</p></div>
+                            <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+                        </div>
+                        <div class="setting-row">
+                            <div><h4>SMS Reminders</h4><p>Get text reminders before appointments</p></div>
+                            <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+                        </div>
+                        <div class="setting-row">
+                            <div><h4>Marketing Emails</h4><p>Receive promotional offers and deals</p></div>
+                            <label class="toggle-switch"><input type="checkbox"><span class="toggle-slider"></span></label>
+                        </div>
+                        <div class="setting-row">
+                            <div><h4>Dark Mode</h4><p>Toggle dark/light theme</p></div>
+                            <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+                        </div>
+                        <div class="setting-row">
+                            <div><h4>Two-Factor Auth</h4><p>Extra security for your account</p></div>
+                            <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="db-card settings-section">
+                    <div class="card-header"><h2>Payment Methods</h2></div>
+                    <div class="payment-methods">
+                        <div class="payment-card">
+                            <div class="pc-top">
+                                <i data-lucide="credit-card"></i>
+                                <span class="pc-type">VISA</span>
+                            </div>
+                            <span class="pc-number">•••• •••• •••• 4521</span>
+                            <div class="pc-bottom"><span>John Mercer</span><span>08/28</span></div>
+                            <span class="pc-default">Default</span>
+                        </div>
+                        <div class="payment-card secondary-payment">
+                            <div class="pc-top">
+                                <i data-lucide="credit-card"></i>
+                                <span class="pc-type">MASTERCARD</span>
+                            </div>
+                            <span class="pc-number">•••• •••• •••• 7893</span>
+                            <div class="pc-bottom"><span>John Mercer</span><span>11/27</span></div>
+                        </div>
+                        <button class="add-payment-btn"><i data-lucide="plus"></i>Add New Card</button>
+                    </div>
+                </div>
+
+                <div class="db-card settings-section danger-zone">
+                    <div class="card-header"><h2>Danger Zone</h2></div>
+                    <div class="setting-row">
+                        <div><h4>Delete Account</h4><p>Permanently delete your account and all data</p></div>
+                        <button class="danger-btn">Delete Account</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ── FOOTER (always visible) ── -->
+        <footer class="db-footer">
+            <span>&copy; 2026 Velocity Motorsports. All rights reserved.</span>
+            <div class="db-footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Support</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="js/dashboard1.js"></script>
+</body>
+</html>
